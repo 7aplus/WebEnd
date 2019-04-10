@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Home</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Google Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+	<script src="js/highcharts.js"></script>
+	<script src="js/jquery.easydropdown.js"></script>
+</head>
+
+<body>
+	<!-- Header Starts Here -->
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a href="index.html">
+					<h1>Hibernia-Sino</h1>
+				</a>
+			</div>
+			<span class="menu"></span>
+			<script>
+				$("span.menu").click(function () {
+					$(".navigation").slideToggle("slow", function () {
+						// Animation complete.
+					});
+				});
+			</script>
+			<div class="cleary"></div>
+			<div class="navigation">
+				<ul class="navig">
+					<li><a href="index.html" class="active" id="index">HOME</a></li>
+					<!-- <li><a href="brands.html">REPORT</a></li> -->
+					<li><a href="men.html" id="profile">PROFILE</a></li>
+					<li><a href="contact.html" id="contact">REPORT</a></li>
+				</ul>
+			</div>
+			<div class="search-bar">
+				<input type="submit" value="" />
+				<div class="text">
+					<input type="text" placeholder="Search.." required=" 	" />
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="brand">
+			<div class="container">
+				<div class="brand-home">
+					<ul class="path">
+						<li><a href="index.html">Home</a>&nbsp; ></li>
+						<li class="actev">Contact&nbsp;</li>
+						<li id="show">&nbsp;</li>
+					</ul>
+					<table class="table table-hover table-bordered ">
+						<thead>
+							<tr>
+								<th>orderID</th>
+								<th>time</th>
+								<th>status</th>
+								<th>feedback</th>
+							</tr>
+						</thead>
+						<tbody id="info_tbody">
+						</tbody>
+					</table>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="footer">
+			<div class="logo">
+				<a href="#">
+					<h1>Hibernia-Sino</h1>
+				</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<script src="js/show.js"></script>
+</body>
+<script type="text/javascript">
+	
+</script>
+
+	
+
+</html>

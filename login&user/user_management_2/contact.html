@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Contact</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</head>
+
+<body>
+	<!-- Header Starts Here -->
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<a href="index.html">
+					<h1>Hibernia-Sino</h1>
+				</a>
+			</div>
+			<span class="menu"></span>
+			<script>
+				$("span.menu").click(function () {
+					$(".navigation").slideToggle("slow", function () {
+						// Animation complete.
+					});
+				});
+			</script>
+			<div class="cleary"></div>
+			<div class="navigation">
+				<ul class="navig">
+					<li><a href="index.html" id="index">HOME</a></li>
+					<!-- <li><a href="brands.html">REPORT</a></li> -->
+					<li><a href="men.html">PROFILE</a></li>
+					<li><a href="contact.html" class="active" id="contact">REPORT</a></li>
+				</ul>
+			</div>
+			<div class="search-bar">
+				<input type="submit" value="" />
+				<div class="text">
+					<input type="text" placeholder="Search.." required=" 	" />
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Header Ends Here -->
+	<!-- Brand Page Starts Here -->
+	<div class="container">
+		<div class="brand">
+			<!-- Content --- Bar -->
+			<div class="brand-report">
+				<ul class="path">
+					<li><a href="index.html">Home</a>&nbsp; ></li>
+					<li class="actev">Contact&nbsp;</li>
+				</ul>
+				<h3 class="page-hed">Report your information</h3>
+				<div class="clearfix"></div>
+				<div class="contact-boxy">
+					<div class="text1">
+						<p>Lost Location</p>
+						<input type="text" id="location">
+						<p>Time</p>
+						<input type="date" id="time">
+					</div>
+					<div class="text1">
+						<p>Message</p>
+						<textarea id="message"></textarea>
+					</div>
+					<div class="text-b">
+						<input id="report_btn" type="submit" value="Send" />
+					</div>
+				</div>
+
+			</div>
+			<!-- Content --- Bar -->
+			<!-- Side Bar-->
+		</div>
+	</div>
+	<!-- Footer Starts Here -->
+	<div class="container">
+		<div class="footer">
+			<div class="logo">
+				<a href="#">
+					<h1>Hibernia-Sino</h1>
+				</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Footer Ends Here -->
+
+	<script src="js/report.js"></script>
+</body>
+
+</html>
