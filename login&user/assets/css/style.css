@@ -16,6 +16,8 @@ body {
 /* the error message */
 #error_message{
 	color: red;
+	width: auto;
+	text-align: center;
 }
 
 p{
