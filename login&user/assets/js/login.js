@@ -11,6 +11,8 @@ username.addEventListener('blur',function(){
     }
 });
 
+//test the error message
+$("#error_message").val("error message");
 
 
 
@@ -31,6 +33,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
             break;
         }
     }
+
 
     var text = { "type":value,
         "name": username,
