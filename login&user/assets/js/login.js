@@ -41,7 +41,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
         "password": password
     };
     if(username == ""){
-        alert("username can be blank");
+        error_message.innerHTML = "The Password cam't be Wrong!"
     }
     else{
 
@@ -67,7 +67,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
 
                 }
                 else if(data.status_code  == 100220){
-                    error_message.innerHTML = "Password Wrong!"
+                    error_message.innerHTML = "Password Wrong!";
                 }
                 
             }

@@ -35,14 +35,13 @@ btn.addEventListener('click',function(e){
     //get the picture object
     var file = $('#pic').get(0).files[0];
     var fileSize = file.size;
-    var maxSize = 1048576;
+    var maxSize = 102400;
 
     if(ext !='.PNG' && ext !='.GIF' && ext !='.JPG' && ext !='.JPEG' && ext !='.BMP') {
-        parent.layer.msg('文件类型错误,请上传图片类型');
         alert("You have to submit Picture");
     }
     else if(parseInt(fileSize) >= parseInt(maxSize)){
-        alert('上传的文件不能超过1MB');
+        alert('the picture size has to be less than 100kb');
     }
     else{
         //set the data message
