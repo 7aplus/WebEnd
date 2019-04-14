@@ -13,6 +13,8 @@ $("#index").attr("href","index.html?username="+username);
 
 
 
+
+
 var btn = document.getElementById("report_btn");
 btn.addEventListener('click',function(e){
     e.preventDefault();
@@ -20,28 +22,59 @@ btn.addEventListener('click',function(e){
     var location = document.getElementById("location").value;
     var time = document.getElementById("time").value;
     var message = document.getElementById("message").value;
+
+
+
+    //get the information of the picture
+    var img = $("#pic").val();
+    var imgarr = pic.split('\\');
+    var myimg=imgarr[imgarr.length-1]; //去掉 // 获取图片名
+    var houzui = myimg.lastIndexOf('.'); //获取 . 出现的位置
+    var ext = myimg.substring(houzui, myimg.length).toUpperCase();  //切割 . 获取文件后缀
+
+    //get the picture object
+    var file = $('#pic').get(0).files[0];
+    var fileSize = file.size;
+    var maxSize = 1048576;
+
+    if(ext !='.PNG' && ext !='.GIF' && ext !='.JPG' && ext !='.JPEG' && ext !='.BMP') {
+        parent.layer.msg('文件类型错误,请上传图片类型');
+        alert("You have to submit Picture");
+    }
+    else if(parseInt(fileSize) >= parseInt(maxSize)){
+        alert('上传的文件不能超过1MB');
+    }
+    else{
+        //set the data message
+        var text = { "username": username, "location": location ,"time":time, "message":message};
+
+        $.ajax({
+            type: "POST",
+            url: '10.19.42.253:5000/account/login',
+            data: JSON.stringify(text),
+            dataType: "JSON",
+            async: false,
+            success: function (data) {
+                var jsonArray = JSON.parse(data);
+                if(jsonArray.status_code  == 100200){
+                    alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
+                }
+                else if(jsonArray.status_code  == 100211){
+                    window.location.href = "../../management model/user_manage/index.html";
+                }
+                else if(jsonArray.status_code  == 100220){
+                    alert("Password Wrong");
+                }
+
+            }
+        })
+    }
+
+
+
     //get the text of the json object
     
-    var text = { "username": username, "location": location ,"time":time, "message":message};
-    alert(text);
-    // $.ajax({
-    //     type: "POST",
-    //     url: '10.19.42.253:5000/account/login',
-    //     data: JSON.stringify(text),
-    //     dataType: "JSON",
-    //     async: false,
-    //     success: function (data) {
-    //         var jsonArray = JSON.parse(data);
-    //         if(jsonArray.status_code  == 100200){
-    //             alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
-    //         }
-    //         else if(jsonArray.status_code  == 100211){
-    //             window.location.href = "../../management model/user_manage/index.html";
-    //         }
-    //         else if(jsonArray.status_code  == 100220){
-    //             alert("Password Wrong");
-    //         }
-            
-    //     }
-    // })
+
+
+
 })
