@@ -13,6 +13,13 @@ body {
 	left: 0%;
 }
 
+/* the error message */
+#error_message{
+	color: #d61f1f;
+	width: auto;
+	text-align: center;
+}
+
 p{
 	position: relative;
 	left: 25%;

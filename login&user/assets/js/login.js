@@ -11,6 +11,9 @@ username.addEventListener('blur',function(){
     }
 });
 
+//test the error message
+var error_message = document.getElementById("error_message");
+
 
 
 
@@ -32,12 +35,13 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
         }
     }
 
+
     var text = { "type":value,
         "name": username,
         "password": password
     };
     if(username == ""){
-        alert("username can be blank");
+        error_message.innerHTML = "The Password cam't be Wrong!"
     }
     else{
 
@@ -51,7 +55,8 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
             processData: false,
             success: function (data) {
                 if(data.status_code  == 100200){
-                    alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
+                    // 100200不知道咋错了，100211成功 100220密码错误
+                    error_message.innerHTML = "error!";
                 }
                 else if(data.status_code  == 100211){
                     if (value=='customer'){
@@ -62,7 +67,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
 
                 }
                 else if(data.status_code  == 100220){
-                    alert("Password Wrong");
+                    error_message.innerHTML = "Password Wrong!";
                 }
                 
             }
