@@ -1,0 +1,21 @@
+.response:hover {
+    border-radius: 20px;
+    background-color: snow;
+    color: #555555;
+}
+
+.response{
+    background-color: #00a0e9;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    padding:1px 9px ;
+    font-size: small;
+}
