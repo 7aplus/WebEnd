@@ -45,12 +45,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
     //get the value of the radio button
     var radios = document.getElementsByName("type");
     var value;
-    for(var i=0;i<radios.length;i++){
-        if(radios[i].checked){
-            value = radios[i].value;
-            break;
-        }
-    }
+    value = $('#type option:selected').val();
 
 
     var text = { "type":value,
@@ -94,7 +89,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
                 else if(data.status_code  == 100220){
                     error_message.innerHTML = "Password Wrong!";
                 }
-                
+
             }
         })
 		}

@@ -21,7 +21,7 @@
     <link href="css/table.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>    
+    <!--[if lt IE 9]>
     <![endif]-->
 </head>
 
@@ -139,19 +139,15 @@
                         <div class="card-block">
                             <h3 class="card-title">Basic Table</h3>
                             <h6 class="card-subtitle">Add class <code>.table</code></h6>
-                            <div class="table-responsive">
-                                <table class="table" id="table">
-                                    <thead >
-                                    <tr>
-                                        <th>Order Number</th>
-                                        <th>Location</th>
-                                        <th>Status</th>
-                                        <th>Feedback</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="info_tbody">
-                                    </tbody>
-                                </table>
+                            <div class="form-group">
+                                <label>Location:</label>
+                                <input type="text" id="location" class="form-control">
+                                <label>Time</label>
+                                <input type="date" id="time" class="form-control">
+                                <label>Message</label>
+                                <textarea id="message" class="form-control"></textarea>
+                                <input id="report_btn" type="submit" value="Send" >
+
                             </div>
                         </div>
                     </div>

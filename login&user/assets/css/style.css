@@ -13,6 +13,14 @@ body {
 	left: 0%;
 }
 
+#remember{
+	position: relative;
+}
+
+#type{
+	font-size: 17px;
+}
+
 /* the error message */
 #error_message{
 	color: #d61f1f;
