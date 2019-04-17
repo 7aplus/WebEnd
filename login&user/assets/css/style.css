@@ -13,6 +13,17 @@ body {
 	left: 0%;
 }
 
+#customer_btn{
+	width: 50%;
+	background-color: #b73841;
+	float: left;
+}
+#employee_btn{
+	width: 50%;
+	background-color: #00a0e9;
+	float: right;
+}
+
 #remember{
 	position: relative;
 }
