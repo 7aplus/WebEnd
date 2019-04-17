@@ -64,7 +64,18 @@ function save_cookies(){
 var error_message = document.getElementById("error_message");
 
 
-
+//用按钮来替换option
+var value = ""
+$("#employee_btn").click(function () {
+    $("#employee_btn").attr("class","btn btn-default active")
+    $("#customer_btn").attr("class","btn btn-primary")
+    value = "employee";
+})
+$("#customer_btn").click(function () {
+    $("#customer_btn").attr("class","btn btn-primary active")
+    $("#employee_btn").attr("class","btn btn-default")
+    value = "customner";
+})
 
 
 document.getElementById("signin_btn").addEventListener("click", function (e) {
@@ -77,13 +88,14 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
     //set the cookie for the user
 
     save_cookies();
-    
+    alert(value);
 	
 	
     //get the value of the radio button
-    var radios = document.getElementsByName("type");
-    var value;
-    value = $('#type option:selected').val();
+    // var radios = document.getElementsByName("type");
+    // var value;
+    // value = $('#type option:selected').val();
+
 
 
     var text = { "type":value,
