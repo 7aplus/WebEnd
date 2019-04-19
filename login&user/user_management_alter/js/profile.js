@@ -15,3 +15,7 @@ $("#home_page").attr("href","user_managment_alter.html?username="+username);
 $("#report_page").attr("href","table-report.html?username="+username);
 $("#profile_page").attr("href","pages-profile.html?username="+username);
 $("#home_link").attr("href","user_managment_alter.html?username="+username);
+
+$("#profile-pic").click(function () {
+    $("#modal").modal("show");
+})
