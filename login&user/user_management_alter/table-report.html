@@ -89,16 +89,16 @@
                 <ul id="sidebarnav">
                     <li>
                     <li>
-                        <a href="user_managment_alter.html" class="waves-effect"><i class="fa fa-table m-r-10"
+                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10"
                                                                                     aria-hidden="true"></i>Basic
                             Table</a>
                     </li>
                     <li>
-                        <a href="table-report.html" class="waves-effect"><i class="fa fa-table m-r-10"
+                        <a href="table-report.html" class="waves-effect" id="report_page"><i class="fa fa-table m-r-10"
                                                                             aria-hidden="true"></i>Report</a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -118,7 +118,7 @@
                 <div class="col-md-6 col-8 align-self-center">
                     <h3 class="text-themecolor m-b-0 m-t-0">Report</h3>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="user_managment_alter.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="user_managment_alter.html" id="home_link">Home</a></li>
                         <li class="breadcrumb-item active">Report</li>
                     </ol>
                 </div>
@@ -159,6 +159,9 @@
                                     <input type="text" id="location" class="form-control form-control-line">
                                     <label>Time</label>
                                     <input type="date" id="time" class="form-control form-control-line">
+                                    <label>Picture</label>
+                                    <input type="file" id="picture" class="form-control">
+                                    <img class="head-img">
                                     <label>Message</label>
                                     <textarea id="message" class="form-control" rows="5"></textarea>
                                     <input id="report_btn" type="submit" value="Send">
