@@ -53,6 +53,7 @@ function save_cookies(){
         document.cookie="username="+username;
         document.cookie="password="+password;
         document.cookie="remember="+"true";
+
     }else{
         document.cookie="username="+username;
         document.cookie="password="+password;
@@ -88,7 +89,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
     //set the cookie for the user
 
     save_cookies();
-    alert(value);
+
 	
 	
     //get the value of the radio button
@@ -143,7 +144,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
         //     }
         // })
 		// }
-		
+		// window.location.href= "user_management_alter/user_managment_alter.html?username="+username;
 		
          
     }
