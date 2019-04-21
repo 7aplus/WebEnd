@@ -15,12 +15,12 @@ body {
 
 #customer_btn{
 	width: 50%;
-	background-color: #b73841;
+	background-color: #ce8483;
 	float: left;
 }
 #employee_btn{
 	width: 50%;
-	background-color: #00a0e9;
+	background-color: #5cb3fd;
 	float: right;
 }
 
