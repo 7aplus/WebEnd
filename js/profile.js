@@ -31,13 +31,18 @@ window.onload=function () {
 function showInfo(data) {
     let fullName = document.getElementById('fullName');
     fullName.innerHTML = data.firstName+' '+data.lastName;
-    let accountName = document.getElementById('account');
-    accountName.innerHTML = data.username;
+    let cardName = document.getElementById('card-name');
+    cardName.innerText = data.firstName+' '+data.lastName;
+    let titleName = document.getElementById('title-name');
+    titleName.innerText = data.firstName+' '+data.lastName;
     let email = document.getElementById('example-email');
     email.innerText = data.email;
     let phone = document.getElementById('phone');
     phone.innerText = data.phone;
     let country = document.getElementById('country');
+    let account = document.getElementById('account');
+    account.innerText = data.email;
+
     if(data.country==='0'){
         country[0].selected=true;
     }else{
