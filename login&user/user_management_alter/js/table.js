@@ -19,7 +19,7 @@
 //             }
 //         }
 //     });
-};
+// };
 function showTable(data) {
 
     // let tbody=document.getElementsByTagName('tbody');

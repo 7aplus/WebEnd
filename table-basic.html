@@ -105,9 +105,9 @@
                         <li>
 <!--                            <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>-->
 <!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>-->
-<!--                        </li>-->
+                        <li>
+                            <a id="profile" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        </li>
                         <li>
                             <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                         </li>
@@ -314,6 +314,14 @@
                     let orderNumber=$('tr').eq(index).children('td').eq(1).text();
                     window.location.href='table-content.html?values='+orderNumber;
 
+                });
+                $("#profile").click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
+                    window.location.href='pages-profile.html?values='+result;
                 });
             });
         </script>

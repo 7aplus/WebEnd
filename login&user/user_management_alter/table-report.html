@@ -160,7 +160,8 @@
                                     <label>Time</label>
                                     <input type="date" id="time" class="form-control form-control-line">
                                     <label>Picture</label>
-                                    <input type="file" id="picture" class="form-control">
+                                    <input type="file" id="picture" class="form-control" onchange="fileBase64();">
+                                    <div id="imgTest"></div>
                                     <img class="head-img">
                                     <label>Message</label>
                                     <textarea id="message" class="form-control" rows="5"></textarea>

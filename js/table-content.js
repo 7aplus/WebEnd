@@ -37,12 +37,15 @@ function showTable(data){
     let lastName=document.getElementById('lastname');
     let time=document.getElementById('time');
     let description=document.getElementById('description');
+    let img = document.getElementById('image1');
     order.innerHTML=data.orderid;
     username.innerHTML=data.username;
     firstName.innerHTML=data.firstname;
     lastName.innerHTML=data.lastname;
     time.innerHTML=data.time;
     description.innerHTML=data.description;
+    document.getElementById('image1').src=data.photo;
+    img.class= data.photo.toString();
 }
 
 $(function() {

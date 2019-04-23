@@ -75,7 +75,7 @@ $("#employee_btn").click(function () {
 $("#customer_btn").click(function () {
     $("#customer_btn").attr("class","btn btn-primary active")
     $("#employee_btn").attr("class","btn btn-default")
-    value = "customner";
+    value = "customer";
 })
 
 
@@ -115,36 +115,37 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
 			error_message.innerHTML = "Password format error"
 
 		}
-		// else{
-		// 	$.ajax({
-        //     type: "POST",
-        //     url: 'http://10.19.42.253:5000/account/login',
-        //     data: JSON.stringify(text),
-        //     contentType:"application/jason; charset=UTF-8",
-        //     async: false,
-        //     cache: false,
-        //     processData: false,
-        //     success: function (data) {
-        //         if(data.status_code  == 100200){
-        //             // 100200不知道咋错了，100211成功 100220密码错误
-        //             error_message.innerHTML = "error!";
-        //         }
-        //         else if(data.status_code  == 100211){
-        //             if (value=='customer'){
-        //                 window.location.href = "user_management_2/index.html?username="+username;
-        //             } else if(value=='employee'){
-        //                 window.location.href = "../table-basic.html";
-        //             }
-        //
-        //         }
-        //         else if(data.status_code  == 100220){
-        //             error_message.innerHTML = "Password Wrong!";
-        //         }
-        //
-        //     }
-        // })
-		// }
-		window.location.href= "user_management_alter/user_managment_alter.html?username="+username;
+		else{
+			$.ajax({
+            type: "POST",
+            url: 'http://10.19.42.253:5000/account/login',
+            data: JSON.stringify(text),
+            contentType:"application/jason; charset=UTF-8",
+            async: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+
+                if(data.status_code  == 100200){
+                    // 100200不知道咋错了，100211成功 100220密码错误
+                    error_message.innerHTML = "error!";
+                }
+                else if(data.status_code  == 100211){
+                    if (value=='customer'){
+                        window.location.href = "user_management_alter/table-report.html?username="+username;
+                    } else if(value=='employee'){
+                        window.location.href = "../table-basic.html?username="+username;
+                    }
+
+                }
+                else if(data.status_code  == 100220){
+                    error_message.innerHTML = "Password Wrong!";
+                }
+
+            }
+        })
+		}
+		// window.location.href= "user_management_alter/user_managment_alter.html?username="+username;
 		
          
     }

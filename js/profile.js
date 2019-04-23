@@ -1,30 +1,36 @@
 window.onload=function () {
-    // let result;
-    // let url=window.location.search;
-    // if(url.indexOf("?")!==-1){
-    //     result = url.substr(url.indexOf("=")+1);
-    // }
-    // let text = {"manager": result};
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: 'http://10.19.42.253:5000/report/get_all_report',
-    //     data: JSON.stringify(text),
-    //     contentType: "application/jason; charset=UTF-8",
-    //     async: false,
-    //     cache: false,
-    //     processData: false,
-    //     success: function (data) {
-    //         if (data.status_code === 100200) {
-    //             alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
-    //         } else if (data.status_code === 'success') {
-    //             //$('tbody').append('tr');
-    //            showTable(data);
-    //         } else if (data.status_code === 100220) {
-    //             alert("Password Wrong");
-    //         }
-    //     }
-    // });
+    let result;
+    let url=window.location.search;
+    if(url.indexOf("?")!==-1){
+        result = url.substr(url.indexOf("=")+1);
+        alert(result);
+    }
+    let text = {"type": 'employee','name':result};
+    alert("start");
+    let account = document.getElementById('account');
+    account.innerText = result;
+    $.ajax({
+
+        type: "POST",
+        url: 'http://10.19.42.253:5000/account/get_account_details',
+        data: JSON.stringify(text),
+        contentType: "application/jason; charset=UTF-8",
+        async: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+            if (data.status_code === 100200) {
+                alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
+            } else if (data.status_code === 'success') {
+                //$('tbody').append('tr');
+                alert(data.id);
+               // showInfo(data);
+            } else if (data.status_code === 100220) {
+                alert("Password Wrong");
+            }
+        }
+    });
 
 };
 
