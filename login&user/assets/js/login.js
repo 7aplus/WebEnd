@@ -132,7 +132,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
                 }
                 else if(data.status_code  == 100211){
                     if (value=='customer'){
-                        window.location.href = "user_management_alter/table-report.html?username="+username;
+                        window.location.href = "user_management_alter/user_managment_alter.html?username="+username;
                     } else if(value=='employee'){
                         window.location.href = "../table-basic.html?username="+username;
                     }
