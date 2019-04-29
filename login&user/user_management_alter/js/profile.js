@@ -22,12 +22,7 @@ $("#profile-pic").click(function () {
     $("#modal").modal("show");
 })
 
-var f_name = $("#f_name");
-var l_name = $("#l_name");
-var email = $("#email");
-var phone_num = $("#phone_num");
-var country = $("#country");
-var password = $("#password");
+
 
 var text = { "type":"user",
 "name": username,
@@ -42,7 +37,6 @@ $.ajax({
     cache: false,
     processData: false,
     success: function (data) {
-        alert("aaaaa")
         if(data.status_code == "success"){
             $("#f_name").val(data.firstName);
             $("#l_name").val(data.lastName);
@@ -53,4 +47,36 @@ $.ajax({
         }
 
     }
+})
+
+
+$("#upload").on('click',function(){
+    var f_name = $("#f_name").val();
+    var l_name = $("#l_name").val();
+    var email = $("#email").val();
+    var phone_num = $("#phone_num").val();
+    var country = $("#country").val();
+    var password = $("#password").val();
+
+    $.ajax({
+        type: "POST",
+        url: 'http://10.19.42.253:5000/account/get_account_details',
+        data: JSON.stringify(text),
+        contentType:"application/jason; charset=UTF-8",
+        async: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+            alert("aaaaa")
+            if(data.status_code == "success"){
+                $("#f_name").val(data.firstName);
+                $("#l_name").val(data.lastName);
+                $("#email").val(data.email);
+                $("#phone_num").val(data.phone);
+                $("#country").val(data.country);
+                $("#password").val(data.password);
+            }
+    
+        }
+    })
 })
