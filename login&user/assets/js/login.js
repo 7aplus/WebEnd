@@ -145,7 +145,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
             }
         })
 		}
-		// window.location.href= "user_management_alter/user_managment_alter.html?username="+username;
+        window.location.href = "user_management_alter/user_managment_alter.html?username="+username;
 		
          
     }

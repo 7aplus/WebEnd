@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Hibernia-Sino</title>
+    <title>Monster Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
     <!-- Bootstrap Core CSS -->
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -19,9 +19,10 @@
     <!-- You can change the theme colors from here -->
     <link href="css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="css/table.css" rel="stylesheet">
+    <link href="css/demo.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>    
+    <!--[if lt IE 9]>
     <![endif]-->
 </head>
 
@@ -29,7 +30,8 @@
 
 <div class="preloader">
     <svg class="circular" viewBox="25 25 50 50">
-        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+    </svg>
 </div>
 
 <div id="main-wrapper">
@@ -43,14 +45,14 @@
                     <b>
                         <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                         <!-- Dark Logo icon -->
-                        <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        <img src="assets/images/logo-icon.png" alt="homepage" class="dark-logo"/>
 
                     </b>
                     <!--End Logo icon -->
                     <!-- Logo text -->
                     <span>
                             <!-- dark Logo text -->
-                            <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo"/>
                         </span>
                 </a>
             </div>
@@ -59,17 +61,21 @@
 
                 <ul class="navbar-nav mr-auto mt-md-0 ">
                     <!-- This is  -->
-                    <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark"
+                                            href="javascript:void(0)"><i class="ti-menu"></i></a></li>
                     <li class="nav-item hidden-sm-down">
                         <form class="app-search p-l-20">
-                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a>
+                            <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i
+                                class="ti-search"></i></a>
                         </form>
                     </li>
                 </ul>
 
                 <ul class="navbar-nav my-lg-0">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="pages-profile.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic m-r-5" />Markarn Doe</a>
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                src="assets/images/users/1.jpg" alt="user" class="profile-pic m-r-5"/>Markarn Doe</a>
                     </li>
                 </ul>
             </div>
@@ -84,10 +90,13 @@
                 <ul id="sidebarnav">
                     <li>
                     <li>
-                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
-
+                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10"
+                                                                                                   aria-hidden="true"></i>Basic
+                            Table</a>
+                    </li>
                     <li>
-                        <a href="table-report-1.html" class="waves-effect" id="report_page"><i class="fa fa-columns m-r-10" aria-hidden="true" ></i>Report</a>
+                        <a href="table-report.html" class="waves-effect" id="report_page"><i class="fa fa-table m-r-10"
+                                                                                             aria-hidden="true"></i>Report</a>
                     </li>
                     <li>
                         <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
@@ -108,14 +117,16 @@
 
             <div class="row page-titles">
                 <div class="col-md-6 col-8 align-self-center">
-                    <h3 class="text-themecolor m-b-0 m-t-0">Table</h3>
+                    <h3 class="text-themecolor m-b-0 m-t-0">Report</h3>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="user_managment_alter.html" id="home_link">Home</a></li>
-                        <li class="breadcrumb-item active">Table</li>
+                        <li class="breadcrumb-item active">Report</li>
                     </ol>
                 </div>
                 <div class="col-md-7 col-5 align-self-center dropdown">
-                    <button type="button" class="btn  dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">All reports</button>
+                    <button type="button" class="btn  dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">All
+                        reports
+                    </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                         <li role="presentation" class="dropdown-header">Choose sort mode</li>
                         <li role="presentation">
@@ -128,33 +139,65 @@
                             <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-reject.html"> All rejected</a>
                         </li>
                         <li role="presentation">
-                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-approval.html"> All approval</a>
+                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-approval.html"> All
+                                approval</a>
                         </li>
                     </ul>
                 </div>
                 <div></div>
             </div>
 
-            <div class="row">
-                <!-- column -->
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-block">
-                            <h3 class="card-title">Basic Table</h3>
-                            <h6 class="card-subtitle">Add class <code>.table</code></h6>
-                            <div class="table-responsive">
-                                <table class="table" id="table">
-                                    <thead >
-                                    <tr>
-                                        <th>Order Number</th>
-                                        <th>Time</th>
-                                        <th>Status</th>
-                                        <th>Feedback</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody id="info_tbody">
-                                    </tbody>
-                                </table>
+            <div class="demo">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <img src="assets/images/img-1.jpg">
+                                <div class="box-content">
+                                    <h3 class="title">Williamson</h3>
+                                    <span class="post">Web Developer</span>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci pariatur qui.
+                                    </p>
+                                    <ul class="icon">
+                                        <li><a href="#" class="fa fa-search" id="insurance_1"></a></li>
+                                        <li><a href="#" class="fa fa-link"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <img src="assets/images/img-2.jpg">
+                                <div class="box-content">
+                                    <h3 class="title">Kristiana</h3>
+                                    <span class="post">Web Designer</span>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci pariatur qui.
+                                    </p>
+                                    <ul class="icon">
+                                        <li><a href="#" class="fa fa-search" id="insurance_2"></a></li>
+                                        <li><a href="#" class="fa fa-link"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6">
+                            <div class="box">
+                                <img src="assets/images/img-3.jpg">
+                                <div class="box-content">
+                                    <h3 class="title">Steve Thomas</h3>
+                                    <span class="post">Web Developer</span>
+                                    <p class="description">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci pariatur qui.
+                                    </p>
+                                    <ul class="icon">
+                                        <li><a href="#" class="fa fa-search" id="insurance_3"></a></li>
+                                        <li><a href="#" class="fa fa-link"></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,17 +230,16 @@
 <!--Custom JavaScript -->
 <script src="js/custom.min.js"></script>
 <script src="js/table.js"></script>
-
-<script src="js/show.js"></script>
-
+<script src="js/report.js"></script>
+<script src="js/table-report-1.js"></script>
 <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 <script>
-    $(function() {
-        $(".response").click(function(){
-            let td=$(this).parent();
-            let index=td.parent()[0].rowIndex;
-            let orderNumber=$('tr').eq(index).children('td').eq(1).text();
-            window.location.href='table-content.html?values='+orderNumber;
+    $(function () {
+        $(".response").click(function () {
+            let td = $(this).parent();
+            let index = td.parent()[0].rowIndex;
+            let orderNumber = $('tr').eq(index).children('td').eq(1).text();
+            window.location.href = 'table-content.html?values=' + orderNumber;
 
         });
     });
