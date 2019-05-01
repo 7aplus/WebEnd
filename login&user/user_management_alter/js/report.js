@@ -10,6 +10,13 @@ function oneValues(){
     }
     return result;
 }
+
+
+function getType(){
+    var type = window.localStorage.getItem("type");
+    return type;
+}
+
 var username = oneValues();
 $("#home_page").attr("href","user_managment_alter.html?username="+username);
 $("#report_page").attr("href","table-report.html?username="+username);

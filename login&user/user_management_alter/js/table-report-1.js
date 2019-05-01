@@ -10,6 +10,7 @@ var username = oneValues();
 //添加三个按钮的listener
 $("#insurance_1").on('click',function () {
     window.location.href = "table-report.html?username="+username+"&type=1"
+    window.localStorage.setItem("type", "1");
 })
 $("#insurance_1").on('click',function () {
     window.location.href = "table-report.html?username="+username+"&type=2"
