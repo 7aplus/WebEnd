@@ -82,3 +82,57 @@ $("#upload").on('click',function(){
         }
     })
 })
+
+$("#switch_language_btn").on('click', function () {
+    //将语言的缓存存为zh，表示中文
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        window.localStorage.setItem("language", "en");
+
+    } else {
+        window.localStorage.setItem("language", "zh");
+
+    }
+
+    window.location.reload();
+})
+
+function switchLanguage() {
+    var table_zh = ["姓", "名", "邮箱", "密码","电话","国籍"];
+    var table_en = ["Firstname", "Lastname", "Email", "Password","Phone number","country"];
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        // $(this).text("english")
+        $("#switch_language_btn").html("切换语言");
+        $("#report-title").text("上报");
+        $("#little-title").html("上报");
+        $("#home_link").html("主菜单");
+        $(".card-title").html("主表单");
+
+        $(".form_1").each(function(i, item) {
+            $(item).text(table_zh[i]);
+        });
+        $(".updata_btn").text("更新图片");
+        $("#report_btn").text("提交");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
+        $("#profile_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>个人信息");
+        $("#profile_link").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+    } else {
+
+        $("#report-title").text("Report");
+        $("#little-title").html("Report");
+        $("#home_link").html("Home");
+        $(".card-title").html("Basic Form");
+        $("#switch_language_btn").html("switch language");
+        $(".form_1").each(function(i, item) {
+            $(item).text(table_en[i]);
+        });
+        $(".updata_btn").text("Update picture");
+        $("#report_btn").text("Submit");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        $("#profile_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Profile");
+        $("#profile_link").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+    }
+}
+switchLanguage();
+
