@@ -30,9 +30,6 @@ $("#switch_language_btn").on('click', function () {
 
     window.location.reload();
 })
-
-
-//测试
 function switchLanguage() {
     var table_zh = ["订单号", "时间", "状态", "反馈"];
     var table_en = ["Order Number", "Time", "Status", "Feedback"];
@@ -57,7 +54,6 @@ function switchLanguage() {
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
     }
 }
-
 switchLanguage();
 
 //首先想api发送请求
