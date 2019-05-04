@@ -159,7 +159,6 @@ function switchLanguage() {
         $("#little-title").html("上报");
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
-
         $("#basic_form").children("label").each(function(i, item) {
             $(item).text(table_zh[i]);
         });

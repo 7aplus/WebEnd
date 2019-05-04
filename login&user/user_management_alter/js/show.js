@@ -41,6 +41,7 @@ function switchLanguage() {
         });
         $(".fa fa-table m-r-10").text("主菜单")
         $(".card-title").html("主菜单");
+        $("#switch_language_btn").html("切换语言");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>上报");
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
@@ -49,6 +50,7 @@ function switchLanguage() {
             $(item).text(table_en[i]);
         });
         $(".card-title").html("Basic Table");
+        $("#switch_language_btn").html("Switch Language");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
         $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");

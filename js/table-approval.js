@@ -73,3 +73,61 @@ function showTable(data) {
     }
 
 }
+
+//switch language
+$("#switch_language_btn").on('click', function () {
+    //将语言的缓存存为zh，表示中文
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        window.localStorage.setItem("language", "en");
+    } else {
+        window.localStorage.setItem("language", "zh");
+    }
+
+    window.location.reload();
+})
+function switchLanguage() {
+    var table_zh = ["#", "订单号", "姓", "名","用户名","状态","操作"];
+    var table_en = ["#", "Order Number", "First Name", "Last Name","Username","Status","Operation"];
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        // $(this).text("english")
+        $("th").each(function (i, item) {
+            $(item).text(table_zh[i]);
+        });
+        $(".fa fa-table m-r-10").text("主菜单");
+        $("#report-title").text("主菜单");
+        $("#little-title").html("主菜单");
+        $("#home_link").html("主页");
+        $(".card-title").html("主菜单");
+        $("#switch_language_btn").html("切换语言");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
+        $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+
+        $(".dropdown-header").text("选择种类");
+        $(".dropdown-toggle").text("接受");
+        var select_zh = ["全部","等待","拒绝","接受"];
+        $(".col-sm-2").each(function (i,item) {
+            $(item).text(select_zh[i]);
+        })
+    } else {
+        $("th").each(function (i, item) {
+            $(item).text(table_en[i]);
+        });
+        $(".card-title").html("Basic Table");
+        $("#report-title").text("Basic Table");
+        $("#little-title").html("Basic Table");
+        $("#home_link").html("Home");
+        $("#switch_language_btn").html("switch language");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+
+        $(".dropdown-header").text("Choose sort mode");
+        $(".dropdown-toggle").text("All approval");
+        var select_en = ["All","All waiting","All rejected","All approval"];
+        $(".col-sm-2").each(function (i,item) {
+            $(item).text(select_en[i]);
+        })
+    }
+}
+switchLanguage();

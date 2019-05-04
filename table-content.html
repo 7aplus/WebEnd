@@ -109,7 +109,7 @@
 <!--                            <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>-->
 <!--                        </li>-->
                         <li>
-                            <a href="table-basic.html" class="waves-effect"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+                            <a href="table-basic.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>-->
@@ -119,7 +119,7 @@
 <!--                        </li>-->
                     </ul>
                     <div class="text-center m-t-30">
-                        <a href="#" class="btn btn-danger">Download Here</a>
+                        <a href="#" class="btn btn-danger" id="switch_language_btn">Switch Language</a>
                     </div>
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -142,11 +142,11 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-6 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Table</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0" id="report-title">Table</h3>
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active"><a href="table-basic.html">Table</a></li>
-                            <li class="breadcrumb-item active">Details</li>
+                            <li class="breadcrumb-item"><a href="index.html" id="home_link">Home</a></li>
+                            <li class="breadcrumb-item active"><a href="table-basic.html" id="little-title">Table</a></li>
+                            <li class="breadcrumb-item active" id="details">Details</li>
                         </ol>
                     </div>
 <!--                    <div class="col-md-6 col-4 align-self-center dropdown">-->
@@ -199,7 +199,7 @@
                                 <hr class="mb-4">
                                 <form action="" method="post" class="reportClaim">
                                     <div class="report-content text"></div>
-                                    <label><h4>Operation</h4></label>
+                                    <label><h4 class="operation">Operation</h4></label>
                                     <div class="row">
                                         <div class="radio-inline col-md-3">
                                             <label>
@@ -213,7 +213,7 @@
                                         </div>
                                     </div>
                                     <hr class="mb-4">
-                                    <label for="form-feedback"><h4>Feedback</h4></label><br>
+                                    <label for="form-feedback"><h4 class="feedback">Feedback</h4></label><br>
                                     <textarea type="text" name="feedback" placeholder="Input the additional questions of the claim" class="form-control scroll-sidebar" id="form-feedback" cols="100"></textarea>
                                     <button type="button" class="btn btn-success" id="submitForm" >
                                         Submit
