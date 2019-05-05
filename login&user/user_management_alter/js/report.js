@@ -18,6 +18,9 @@ function getType(){
 }
 
 var username = window.localStorage.getItem("username");
+$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />"+username);
+
+
 $("#home_page").attr("href","user_managment_alter.html?username="+username);
 $("#report_page").attr("href","table-report.html?username="+username);
 $("#profile_page").attr("href","pages-profile.html?username="+username);
