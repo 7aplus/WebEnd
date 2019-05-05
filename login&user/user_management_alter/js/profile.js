@@ -10,7 +10,7 @@ function oneValues(){
     }
     return result;
 }
-var username = oneValues();
+var username = window.localStorage.getItem("username");
 
 
 
@@ -104,8 +104,8 @@ function switchLanguage() {
     if (language_now == "zh") {
         // $(this).text("english")
         $("#switch_language_btn").html("切换语言");
-        $("#report-title").text("上报");
-        $("#little-title").html("上报");
+        $("#report-title").text("个人信息");
+        $("#little-title").html("个人信息");
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
 
@@ -117,6 +117,7 @@ function switchLanguage() {
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#profile_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>个人信息");
         $("#profile_link").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+        $("#report_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>上报");
     } else {
 
         $("#report-title").text("Report");
@@ -132,6 +133,7 @@ function switchLanguage() {
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
         $("#profile_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Profile");
         $("#profile_link").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+        $("#report_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Report");
     }
 }
 switchLanguage();

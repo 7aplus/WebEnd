@@ -131,6 +131,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
                     error_message.innerHTML = "error!";
                 }
                 else if(data.status_code  == 100211){
+                    window.localStorage.setItem("username", username);
                     if (value=='customer'){
                         window.location.href = "user_management_alter/user_managment_alter.html?username="+username;
                     } else if(value=='employee'){

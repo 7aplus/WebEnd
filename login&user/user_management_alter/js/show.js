@@ -12,7 +12,7 @@ function oneValues() {
     return result;
 }
 
-var username = oneValues();
+var username = window.localStorage.getItem("username");
 $("#home_page").attr("href", "user_managment_alter.html?username=" + username);
 $("#report_page").attr("href", "table-report-1.html?username=" + username);
 $("#profile_page").attr("href", "pages-profile.html?username=" + username);
@@ -63,28 +63,28 @@ var text = {
     "username": username
 }
 var data_each;
-// $.ajax({
-//     type: "POST",
-//     url: 'http://10.19.42.253:5000/report/get_someone_report',
-//     data: JSON.stringify(text),
-//     contentType: "application/jason; charset=UTF-8",
-//     async: false,
-//     cache: false,
-//     processData: false,
-//     success: function (data) {
-//         var len = data.reports.length;
-//         var i;
-//         for (i = 0; i < len; i++) {
-//             if (data.reports[i].status == 1) {
-//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Accpt</td><td>" + data.reports[i].feedback + "</td></tr>");
-//             } else if (data.reports[i].status == (-1)) {
-//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Reject</td><td>" + data.reports[i].feedback + "</td></tr>");
-//             }
-//
-//         }
-//
-//     }
-// })
+$.ajax({
+    type: "POST",
+    url: 'http://10.19.42.253:5000/report/get_someone_report',
+    data: JSON.stringify(text),
+    contentType: "application/jason; charset=UTF-8",
+    async: false,
+    cache: false,
+    processData: false,
+    success: function (data) {
+        var len = data.reports.length;
+        var i;
+        for (i = 0; i < len; i++) {
+            if (data.reports[i].status == 1) {
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Accpt</td><td>" + data.reports[i].feedback + "</td></tr>");
+            } else if (data.reports[i].status == (-1)) {
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Reject</td><td>" + data.reports[i].feedback + "</td></tr>");
+            }
+
+        }
+
+    }
+})
 
 
 

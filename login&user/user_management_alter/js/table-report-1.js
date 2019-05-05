@@ -6,7 +6,7 @@ function oneValues(){
     }
     return result;
 }
-var username = oneValues();
+var username = window.localStorage.getItem("username");
 //添加三个按钮的listener
 $("#insurance_1").on('click',function () {
     window.location.href = "table-report.html?username="+username+"&type=1"
