@@ -54,7 +54,8 @@ $.ajax({
 })
 
 
-$("#upload").on('click',function(){
+$("#upload").on('click',function(e){
+    e.preventDefault();
     var f_name = $("#f_name").val();
     var l_name = $("#l_name").val();
     var email = $("#email").val();
@@ -83,12 +84,7 @@ $("#upload").on('click',function(){
         processData: false,
         success: function (data) {
             if(data.status == "success"){
-                $("#f_name").val(data.firstName);
-                $("#l_name").val(data.lastName);
-                $("#email").val(data.email);
-                $("#phone_num").val(data.phone);
-                $("#country").val(data.country);
-                $("#password").val(data.password);
+                alert("Success");
             }
     
         }

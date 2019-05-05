@@ -44,7 +44,7 @@ function switchLanguage() {
         $("#table_head").children("th").each(function (i, item) {
             $(item).text(table_zh[i]);
         });
-        $(".fa fa-table m-r-10").text("主菜单")
+        $(".fa fa-table m-r-10").text("主菜单");
         $(".card-title").html("主菜单");
         $("#switch_language_btn").html("切换语言");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
