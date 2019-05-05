@@ -73,8 +73,61 @@ function showTable(data) {
     }
 
 }
+function showNewTable(data){
+    let rows=document.getElementsByTagName('tr');
+    for (let i = 0; i<row.length; i++){
+        rows[i].value = '';
+    }
+    let row=document.createElement('tr');
+    for (let i=0; i<7;i++){
+        let attr=document.createElement('td');
+        if(i===0){
+            attr.innerHTML=0;
+            //alert(i.toString());
+        }else if (i===1) {
+            attr.innerHTML=data.order;
+            //alert(data.reports[j].order);
+        }
+        else if (i===2){
+            attr.innerHTML=data.firstName;
+            // alert(data.reports[j].firstName);
+        }else if (i===3){
+            attr.innerHTML=data.lastName;
+            //alert(data.reports[j].lastName);
+        }
+        else if (i===4){
+            attr.innerHTML=data.userName;
+            //alert(data.reports[j].userName);
+        }else if (i===5){
+            let span=document.createElement('span');
+            if (data.status===1){
+                span.className='label label-success radius';
+                span.innerHTML='approval';
+            } else if(data.status===0){
+                span.className='label label-warning radius';
+                span.innerHTML='waiting';
+            }else if (data.status===-1) {
+                span.className='label label-danger radius';
+                span.innerHTML='reject';
+            }
+            //alert(data.reports[j].status);
+            attr.appendChild(span);
+        }
+        else if (i===6){
+            let button=document.createElement('button');
+            button.className='response';
+            button.innerHTML='edit';
+            attr.appendChild(button);
+        }
+
+        row.appendChild(attr);
+    }
+    $('tbody').append(row);
+}
+
 $('.srh-btn').click(function () {
-    let search = document.getElementById('search');
+    let search = document.getElementById('search').value;
+    alert(search);
     let text = {"search": search};
     $.ajax({
         type: "POST",
@@ -87,7 +140,7 @@ $('.srh-btn').click(function () {
         success: function (data) {
 
             if (data.status_code === 'success') {//有该订单 显示
-                showTable(data);
+                showNewTable(data);
             } else if (data.status_code === 'None') {//没有结果
                 document.getElementById('result').innerHTML = 'No such order number.';
                 let time = setTimeout(function(){//定时器
