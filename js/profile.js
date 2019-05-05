@@ -97,3 +97,50 @@ $( function () {
         });
     })
 });
+
+
+
+//switch language
+$("#switch_language_btn").on('click', function () {
+    //将语言的缓存存为zh，表示中文
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        window.localStorage.setItem("language", "en");
+    } else {
+        window.localStorage.setItem("language", "zh");
+    }
+
+    window.location.reload();
+})
+function switchLanguage() {
+    var table_zh = ["姓", "名", "账户", "密码","邮箱","电话号码","国籍"];
+    var table_en = ["First Name", "Last Name", "Account", "Password","Email","Phone No","Select Country"];
+    var language_now = window.localStorage.getItem("language");
+    if (language_now == "zh") {
+        // $(this).text("english")
+        $(".table1").each(function (i, item) {
+            $(item).text(table_zh[i]);
+        });
+        $(".fa fa-table m-r-10").text("主菜单");
+        $("#report-title").text("主菜单");
+        $("#little-title").html("个人信息");
+        $("#home_link").html("主页");
+        $("#switch_language_btn").html("切换语言");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
+        $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+
+
+    } else {
+        $(".table1").each(function (i, item) {
+            $(item).text(table_en[i]);
+        });
+        $("#report-title").text("Basic Table");
+        $("#little-title").html("Profile");
+        $("#home_link").html("Home");
+        $("#switch_language_btn").html("Switch Language");
+        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+
+    }
+}
+switchLanguage();
