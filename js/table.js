@@ -142,7 +142,6 @@ $('.srh-btn').click(function () {
             if (data.status_code === 'success') {//有该订单 显示
                 showNewTable(data);
             } else if (data.status_code === 'None') {//没有结果
-                document.getElementById('result').innerHTML = 'No such order number.';
                 let time = setTimeout(function(){//定时器
 
                         document.getElementById('result').innerHTML = 'No such order number.';
