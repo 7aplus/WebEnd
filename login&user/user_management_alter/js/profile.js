@@ -60,6 +60,17 @@ $("#upload").on('click',function(){
     var country = $("#country").val();
     var password = $("#password").val();
 
+    var text = { "type":"user",
+        "name": username,
+        "emial":email,
+        "phone":phone_num,
+        "firstName":f_name,
+        "lastName":l_name,
+        "password":password,
+        "country":country
+
+    };
+
     $.ajax({
         type: "POST",
         url: 'http://10.19.42.253:5000/account/get_account_details',
@@ -69,8 +80,7 @@ $("#upload").on('click',function(){
         cache: false,
         processData: false,
         success: function (data) {
-            alert("aaaaa")
-            if(data.status_code == "success"){
+            if(data.status == "success"){
                 $("#f_name").val(data.firstName);
                 $("#l_name").val(data.lastName);
                 $("#email").val(data.email);
