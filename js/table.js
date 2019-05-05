@@ -73,7 +73,33 @@ function showTable(data) {
     }
 
 }
+$('.srh-btn').click(function () {
+    let search = document.getElementById('search');
+    let text = {"search": search};
+    $.ajax({
+        type: "POST",
+        url: 'http://10.19.42.253:5000/report/search_report',
+        data: JSON.stringify(text),
+        contentType: "application/jason; charset=UTF-8",
+        async: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
 
+            if (data.status_code === 'success') {//有该订单 显示
+                showTable(data);
+            } else if (data.status_code === 'None') {//没有结果
+                document.getElementById('result').innerHTML = 'No such order number.';
+                let time = setTimeout(function(){//定时器
+
+                        document.getElementById('result').innerHTML = 'No such order number.';
+                    },
+                    3000);//设置三千毫秒即3秒
+                clearTimeout(time);
+            }
+        }
+    });
+});
 
 //switch language
 $("#switch_language_btn").on('click', function () {
@@ -86,7 +112,7 @@ $("#switch_language_btn").on('click', function () {
     }
 
     window.location.reload();
-})
+});
 function switchLanguage() {
     var table_zh = ["#", "订单号", "姓", "名","用户名","状态","操作"];
     var table_en = ["#", "Order Number", "First Name", "Last Name","Username","Status","Operation"];

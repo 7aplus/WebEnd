@@ -105,11 +105,11 @@
 <!--                        <li>-->
 <!--                            <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>-->
 <!--                        </li>-->
-<!--                        <li>-->
-<!--                            <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>-->
-<!--                        </li>-->
                         <li>
-                            <a href="table-basic.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+                            <a class="waves-effect" id="profile"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        </li>
+                        <li>
+                            <a class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>-->
@@ -271,7 +271,25 @@
     <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
 
 <script>
-
+    $(function () {
+        $('#profile').click(function () {
+            var url=window.location.search;
+            let strs;
+            let key;
+            let value;
+            if (url.indexOf("?") !== -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                key = new Array(strs.length);
+                value = new Array(strs.length);
+                for (let i = 0; i < strs.length; i++) {
+                    key[i] = strs[i].split("=")[0];
+                    value[i] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            window.location.href='pages-profile.html?values='+result;
+        })
+    })
 </script>
 
 </body>

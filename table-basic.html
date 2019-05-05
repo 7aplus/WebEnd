@@ -75,7 +75,7 @@
                         <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                         <li class="nav-item hidden-sm-down">
                             <form class="app-search p-l-20">
-                                <input type="text" class="form-control" placeholder="Search for..."> <a class="srh-btn"><i class="ti-search"></i></a>
+                                <input id="search" type="text" class="form-control" placeholder="Search for certain order"> <a class="srh-btn"><i class="ti-search"></i></a><h6 id="result" ></h6>
                             </form>
                         </li>
                     </ul>
@@ -109,7 +109,7 @@
                             <a id="profile" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
                         </li>
                         <li>
-                            <a href="table-basic.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+                            <a class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>-->
@@ -309,10 +309,15 @@
         <script>
             $(function() {
                 $(".response").click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
                     let td=$(this).parent();
                     let index=td.parent()[0].rowIndex;
                     let orderNumber=$('tr').eq(index).children('td').eq(1).text();
-                    window.location.href='table-content.html?values='+orderNumber;
+                    window.location.href='table-content.html?values='+result+'&order='+orderNumber;
 
                 });
                 $("#profile").click(function(){
