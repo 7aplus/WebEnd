@@ -72,10 +72,10 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav mr-auto mt-md-0 ">
                         <!-- This is  -->
-                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+<!--                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" ><i class="ti-menu"></i></a> </li>-->
                         <li class="nav-item hidden-sm-down">
                             <form class="app-search p-l-20">
-                                <input id="search" type="text" class="form-control" placeholder="Search for certain order"> <a class="srh-btn"><i class="ti-search"></i></a><h6 id="result" ></h6>
+                                <input id="search" type="text" class="form-control" placeholder="Search for certain order"> <a class="srh-btn"><i class="ti-search"></i></a><h6 id="result" style="color: red;"></h6>
                             </form>
                         </li>
                     </ul>
@@ -153,16 +153,16 @@
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation" class="dropdown-header">Choose sort mode</li>
                             <li role="presentation">
-                                <a class="col-sm-2" role="menuitem" tabindex="-1" href="#"> All</a>
+                                <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-all"> All</a>
                             </li>
                             <li role="presentation">
-                                <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-waiting.html"> All waiting</a>
+                                <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-waiting"> All waiting</a>
                             </li>
                             <li role="presentation">
-                                <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-reject.html"> All rejected</a>
+                                <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-reject"> All rejected</a>
                             </li>
                             <li role="presentation">
-                                <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-approval.html"> All approval</a>
+                                <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-approval"> All approval</a>
                             </li>
                         </ul>
                     </div>
@@ -327,6 +327,38 @@
                         result = url.substr(url.indexOf("=")+1);
                     }
                     window.location.href='pages-profile.html?values='+result;
+                });
+                $('#table-approval').click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
+                    window.location.href='table-approval.html?values='+result;
+                });
+                $('#table-reject').click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
+                    window.location.href='table-reject.html?values='+result;
+                });
+                $('#table-waiting').click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
+                    window.location.href='table-waiting.html?values='+result;
+                });
+                $('#table-all').click(function(){
+                    let result;
+                    let url=window.location.search;
+                    if(url.indexOf("?")!==-1){
+                        result = url.substr(url.indexOf("=")+1);
+                    }
+                    window.location.href='table-basic.html?values='+result;
                 });
             });
         </script>

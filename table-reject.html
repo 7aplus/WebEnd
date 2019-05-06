@@ -105,9 +105,9 @@
 <!--                    <li>-->
 <!--                        <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>-->
 <!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>-->
-<!--                    </li>-->
+                    <li>
+                        <a id="profile" href="pages-profile.html" class="waves-effect"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                    </li>
                     <li>
                         <a href="table-basic.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                     </li>
@@ -153,16 +153,16 @@
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                         <li role="presentation" class="dropdown-header">Choose sort mode</li>
                         <li role="presentation">
-                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-basic.html"> All</a>
+                            <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-basic"> All</a>
                         </li>
                         <li role="presentation">
-                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-waiting.html"> All waiting</a>
+                            <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-waiting"> All waiting</a>
                         </li>
                         <li role="presentation">
-                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="#"> All rejected</a>
+                            <a class="col-sm-2" role="menuitem" tabindex="-1" > All rejected</a>
                         </li>
                         <li role="presentation">
-                            <a class="col-sm-2" role="menuitem" tabindex="-1" href="table-approval.html"> All approval</a>
+                            <a class="col-sm-2" role="menuitem" tabindex="-1" id="table-approval"> All approval</a>
                         </li>
 
                     </ul>
@@ -310,12 +310,50 @@
 <script>
     $(function() {
         $(".response").click(function(){
+            let result;
+            let url=window.location.search;
+            if(url.indexOf("?")!==-1){
+                result = url.substr(url.indexOf("=")+1);
+            }
             let td=$(this).parent();
             let index=td.parent()[0].rowIndex;
             let orderNumber=$('tr').eq(index).children('td').eq(1).text();
-            window.location.href='table-content.html?values='+orderNumber;
+            window.location.href='table-content.html?values='+result+'&order='+orderNumber;
 
         });
+        $('#table-approval').click(function(){
+            let result;
+            let url=window.location.search;
+            if(url.indexOf("?")!==-1){
+                result = url.substr(url.indexOf("=")+1);
+            }
+            window.location.href='table-approval.html?values='+result;
+        });
+        $('#table-reject').click(function(){
+            let result;
+            let url=window.location.search;
+            if(url.indexOf("?")!==-1){
+                result = url.substr(url.indexOf("=")+1);
+            }
+            window.location.href='table-reject.html?values='+result;
+        });
+        $('#table-waiting').click(function(){
+            let result;
+            let url=window.location.search;
+            if(url.indexOf("?")!==-1){
+                result = url.substr(url.indexOf("=")+1);
+            }
+            window.location.href='table-waiting.html?values='+result;
+        });
+        $('#table-all').click(function(){
+            let result;
+            let url=window.location.search;
+            if(url.indexOf("?")!==-1){
+                result = url.substr(url.indexOf("=")+1);
+            }
+            window.location.href='table-basic.html?values='+result;
+        });
+
     });
 </script>
 

@@ -74,10 +74,6 @@ function showTable(data) {
 
 }
 function showNewTable(data){
-    let rows=document.getElementsByTagName('tr');
-    for (let i = 0; i<row.length; i++){
-        rows[i].value = '';
-    }
     let row=document.createElement('tr');
     for (let i=0; i<7;i++){
         let attr=document.createElement('td');
@@ -110,13 +106,23 @@ function showNewTable(data){
                 span.className='label label-danger radius';
                 span.innerHTML='reject';
             }
-            //alert(data.reports[j].status);
             attr.appendChild(span);
         }
         else if (i===6){
             let button=document.createElement('button');
             button.className='response';
             button.innerHTML='edit';
+            button.onclick=function(){
+                let result;
+                let url=window.location.search;
+                if(url.indexOf("?")!==-1){
+                    result = url.substr(url.indexOf("=")+1);
+                }
+                let td=$(this).parent();
+                let index=td.parent()[0].rowIndex;
+                let orderNumber=$('tr').eq(index).children('td').eq(1).text();
+                window.location.href='table-content.html?values='+result+'&order='+orderNumber;
+            };
             attr.appendChild(button);
         }
 
@@ -127,7 +133,6 @@ function showNewTable(data){
 
 $('.srh-btn').click(function () {
     let search = document.getElementById('search').value;
-    alert(search);
     let text = {"search": search};
     $.ajax({
         type: "POST",
@@ -140,11 +145,13 @@ $('.srh-btn').click(function () {
         success: function (data) {
 
             if (data.status_code === 'success') {//有该订单 显示
+                $('tbody').html('');
                 showNewTable(data);
             } else if (data.status_code === 'None') {//没有结果
+                document.getElementById('result').innerHTML = 'No such order number.';
                 let time = setTimeout(function(){//定时器
 
-                        document.getElementById('result').innerHTML = 'No such order number.';
+                        document.getElementById('result').innerHTML = '';
                     },
                     3000);//设置三千毫秒即3秒
                 clearTimeout(time);

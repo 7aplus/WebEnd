@@ -73,7 +73,92 @@ function showTable(data) {
     }
 
 }
+function showNewTable(data){
+    let row=document.createElement('tr');
+    for (let i=0; i<7;i++){
+        let attr=document.createElement('td');
+        if(i===0){
+            attr.innerHTML=0;
+            //alert(i.toString());
+        }else if (i===1) {
+            attr.innerHTML=data.order;
+            //alert(data.reports[j].order);
+        }
+        else if (i===2){
+            attr.innerHTML=data.firstName;
+            // alert(data.reports[j].firstName);
+        }else if (i===3){
+            attr.innerHTML=data.lastName;
+            //alert(data.reports[j].lastName);
+        }
+        else if (i===4){
+            attr.innerHTML=data.userName;
+            //alert(data.reports[j].userName);
+        }else if (i===5){
+            let span=document.createElement('span');
+            if (data.status===1){
+                span.className='label label-success radius';
+                span.innerHTML='approval';
+            } else if(data.status===0){
+                span.className='label label-warning radius';
+                span.innerHTML='waiting';
+            }else if (data.status===-1) {
+                span.className='label label-danger radius';
+                span.innerHTML='reject';
+            }
+            attr.appendChild(span);
+        }
+        else if (i===6){
+            let button=document.createElement('button');
+            button.className='response';
+            button.innerHTML='edit';
+            button.onclick=function(){
+                let result;
+                let url=window.location.search;
+                if(url.indexOf("?")!==-1){
+                    result = url.substr(url.indexOf("=")+1);
+                }
+                let td=$(this).parent();
+                let index=td.parent()[0].rowIndex;
+                let orderNumber=$('tr').eq(index).children('td').eq(1).text();
+                window.location.href='table-content.html?values='+result+'&order='+orderNumber;
+            };
+            attr.appendChild(button);
+        }
 
+        row.appendChild(attr);
+    }
+    $('tbody').append(row);
+}
+
+$('.srh-btn').click(function () {
+    let search = document.getElementById('search').value;
+    let text = {"search": search};
+    $.ajax({
+        type: "POST",
+        url: 'http://10.19.42.253:5000/report/search_report',
+        data: JSON.stringify(text),
+        contentType: "application/jason; charset=UTF-8",
+        async: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+
+            if (data.status_code === 'success') {//有该订单 显示
+                $('tbody').html('');
+                showNewTable(data);
+            } else if (data.status_code === 'None') {//没有结果
+                document.getElementById('result').innerHTML = 'No such order number.';
+                let time = setTimeout(function(){//定时器
+
+                        document.getElementById('result').innerHTML = '';
+                    },
+                    3000);//设置三千毫秒即3秒
+                clearTimeout(time);
+            }
+        }
+    });
+});
 //switch language
 $("#switch_language_btn").on('click', function () {
     //将语言的缓存存为zh，表示中文
