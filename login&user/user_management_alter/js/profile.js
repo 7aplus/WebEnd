@@ -68,7 +68,7 @@ $("#upload").on('click', function (e) {
     var text = {
         "type": "user",
         "name": username,
-        "emial": email,
+        "email": email,
         "phone": phone_num,
         "firstName": f_name,
         "lastName": l_name,
@@ -79,7 +79,7 @@ $("#upload").on('click', function (e) {
 
     $.ajax({
         type: "POST",
-        url: 'http://10.19.42.253:5000/account/get_account_details',
+        url: 'http://10.19.42.253:5000/account/update_account_details',
         data: JSON.stringify(text),
         contentType: "application/jason; charset=UTF-8",
         async: false,
