@@ -1,26 +1,26 @@
 //get the username
-$(function(){
+$(function () {
     $("#show").html(oneValues());
 });
-function oneValues(){
+function oneValues() {
     let result;
-    let url=window.location.search; //获取url中"?"符后的字串
-    if(url.indexOf("?")!==-1){
-        result = url.substr(url.indexOf("=")+1);
+    let url = window.location.search; //获取url中"?"符后的字串
+    if (url.indexOf("?") !== -1) {
+        result = url.substr(url.indexOf("=") + 1);
     }
     return result;
 }
 //获得用户名
 var username = window.localStorage.getItem("username");
-$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />"+username);
+$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />" + username);
 
 
 
 
-$("#home_page").attr("href","user_managment_alter.html?username="+username);
-$("#report_page").attr("href","table-report-1.html?username="+username);
-$("#profile_page").attr("href","pages-profile.html?username="+username);
-$("#home_link").attr("href","user_managment_alter.html?username="+username);
+$("#home_page").attr("href", "user_managment_alter.html?username=" + username);
+$("#report_page").attr("href", "table-report-1.html?username=" + username);
+$("#profile_page").attr("href", "pages-profile.html?username=" + username);
+$("#home_link").attr("href", "user_managment_alter.html?username=" + username);
 
 $("#profile-pic").click(function () {
     $("#modal").modal("show");
@@ -28,20 +28,21 @@ $("#profile-pic").click(function () {
 
 
 
-var text = { "type":"user",
-"name": username,
+var text = {
+    "type": "user",
+    "name": username,
 };
 
 $.ajax({
     type: "POST",
     url: 'http://10.19.42.253:5000/account/get_account_details',
     data: JSON.stringify(text),
-    contentType:"application/jason; charset=UTF-8",
+    contentType: "application/jason; charset=UTF-8",
     async: false,
     cache: false,
     processData: false,
     success: function (data) {
-        if(data.status_code == "success"){
+        if (data.status_code == "success") {
             $("#f_name").val(data.firstName);
             $("#l_name").val(data.lastName);
             $("#email").val(data.email);
@@ -54,39 +55,40 @@ $.ajax({
 })
 
 
-$("#upload").on('click',function(e){
+$("#upload").on('click', function (e) {
     e.preventDefault();
     var f_name = $("#f_name").val();
     var l_name = $("#l_name").val();
     var email = $("#email").val();
     var phone_num = $("#phone_num").val();
-    var country = $("#country").val();
+    var country = $("#country").find("option:selected").text();
+    alert(country);
     var password = $("#password").val();
 
-    var text = { "type":"user",
+    var text = {
+        "type": "user",
         "name": username,
-        "emial":email,
-        "phone":phone_num,
-        "firstName":f_name,
-        "lastName":l_name,
-        "password":password,
-        "country":country
+        "email": email,
+        "phone": phone_num,
+        "firstName": f_name,
+        "lastName": l_name,
+        "password": password,
+        "country": country
 
     };
 
     $.ajax({
         type: "POST",
-        url: 'http://10.19.42.253:5000/account/get_account_details',
+        url: 'http://10.19.42.253:5000/account/update_account_details',
         data: JSON.stringify(text),
-        contentType:"application/jason; charset=UTF-8",
+        contentType: "application/jason; charset=UTF-8",
         async: false,
         cache: false,
         processData: false,
         success: function (data) {
-            if(data.status == "success"){
-                alert("Success");
-            }
-    
+            // alert("Success");
+
+
         }
     })
 })
@@ -106,8 +108,8 @@ $("#switch_language_btn").on('click', function () {
 })
 
 function switchLanguage() {
-    var table_zh = ["姓", "名", "邮箱", "密码","电话","国籍"];
-    var table_en = ["Firstname", "Lastname", "Email", "Password","Phone number","country"];
+    var table_zh = ["姓", "名", "邮箱", "密码", "电话", "国籍"];
+    var table_en = ["Firstname", "Lastname", "Email", "Password", "Phone number", "country"];
     var language_now = window.localStorage.getItem("language");
     if (language_now == "zh") {
         // $(this).text("english")
@@ -117,7 +119,7 @@ function switchLanguage() {
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
 
-        $(".form_1").each(function(i, item) {
+        $(".form_1").each(function (i, item) {
             $(item).text(table_zh[i]);
         });
         $(".updata_btn").text("更新图片");
@@ -133,7 +135,7 @@ function switchLanguage() {
         $("#home_link").html("Home");
         $(".card-title").html("Basic Form");
         $("#switch_language_btn").html("switch language");
-        $(".form_1").each(function(i, item) {
+        $(".form_1").each(function (i, item) {
             $(item).text(table_en[i]);
         });
         $(".updata_btn").text("Update picture");
