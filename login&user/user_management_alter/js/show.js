@@ -68,31 +68,42 @@ var text = {
     "username": username
 }
 var data_each;
-$.ajax({
-    type: "POST",
-    url: 'http://10.19.42.253:5000/report/get_someone_report',
-    data: JSON.stringify(text),
-    contentType: "application/jason; charset=UTF-8",
-    async: false,
-    cache: false,
-    processData: false,
-    success: function (data) {
-        var len = data.reports.length;
-        var i;
-        for (i = 0; i < len; i++) {
-            if (data.reports[i].status == 1) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Accpt</td><td>" + data.reports[i].feedback + "</td></tr>");
-            } else if (data.reports[i].status == (-1)) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Reject</td><td>" + data.reports[i].feedback + "</td></tr>");
-            }
-            else{
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Waitting</td><td>" + data.reports[i].feedback + "</td></tr>");
-            }
+// $.ajax({
+//     type: "POST",
+//     url: 'http://10.19.42.253:5000/report/get_someone_report',
+//     data: JSON.stringify(text),
+//     contentType: "application/jason; charset=UTF-8",
+//     async: false,
+//     cache: false,
+//     processData: false,
+//     success: function (data) {
+//         var len = data.reports.length;
+//         var i;
+//         for (i = 0; i < len; i++) {
+//             if (data.reports[i].status == 1) {
+//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button class='response'>edit</button></td></tr>");
+//             } else if (data.reports[i].status == (-1)) {
+//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Waitting</span></td><td><button class='response'>edit</button></td></tr>");
+//             }
+//             else{
+//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Reject</span></td><td><button class='response'>edit</button></td></tr>");
+//             }
+//
+//         }
+//
+//     }
+// })
+//测试
+$("#info_tbody").append("<tr>  <td>aaaa</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button class='btn-primary radius table_detail'>edit</button></td></tr>");
 
-        }
+var a = "testing part";
 
-    }
+
+$(".table_detail").click(function () {
+    $("#modal").modal("show");
+    $("#test").html(a);
 })
+
 
 
 
