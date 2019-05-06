@@ -113,15 +113,10 @@ function showNewTable(data){
             button.className='response';
             button.innerHTML='edit';
             button.onclick=function(){
-                let result;
-                let url=window.location.search;
-                if(url.indexOf("?")!==-1){
-                    result = url.substr(url.indexOf("=")+1);
-                }
                 let td=$(this).parent();
                 let index=td.parent()[0].rowIndex;
                 let orderNumber=$('tr').eq(index).children('td').eq(1).text();
-                window.location.href='table-content.html?values='+result+'&order='+orderNumber;
+                window.location.href='table-content.html?order='+orderNumber;
             };
             attr.appendChild(button);
         }

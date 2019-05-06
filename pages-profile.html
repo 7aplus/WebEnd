@@ -83,7 +83,7 @@
                     <!-- ============================================================== -->
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
-                            <img src="assets/images/users/1.jpg" alt="user" class="profile-pic m-r-5" /><a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="title-name">Markarn Doe</a>
+                            <img src="assets/images/users/1.jpg" alt="user" class="profile-pic m-r-5" id="image1"/><a style="color:white;" aria-haspopup="true" aria-expanded="false" id="title-name">Markarn Doe</a>
                         </li>
                     </ul>
                 </div>
@@ -105,10 +105,10 @@
 <!--                            <a href="index.html" class="waves-effect"><i class="fa fa-clock-o m-r-10" aria-hidden="true"></i>Dashboard</a>-->
 <!--                        </li>-->
                         <li>
-                            <a class="waves-effect" id="profile"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                            <a href="pages-profile.html" class="waves-effect" id="profile"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
                         </li>
                         <li>
-                            <a class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
+                            <a href="table-basic.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10" aria-hidden="true"></i>Basic Table</a>
                         </li>
 <!--                        <li>-->
 <!--                            <a href="icon-fontawesome.html" class="waves-effect"><i class="fa fa-font m-r-10" aria-hidden="true"></i>Icons</a>-->
@@ -169,7 +169,7 @@
                     <div class="col-lg-4 col-xlg-3 col-md-5">
                         <div class="card">
                             <div class="card-block">
-                                <center class="m-t-30"> <img src="assets/images/users/5.jpg" class="img-circle" width="150" />
+                                <center class="m-t-30"> <img src="assets/images/users/5.jpg" class="img-circle" width="150" id="image2"/>
                                     <h4 class="card-title m-t-10" id="cardName">Hanna Gover</h4>
                                     <h6 class="card-subtitle" id="position">Accoubts Manager Amix corp</h6>
                                     <div class="row text-center justify-content-md-center">
@@ -296,16 +296,7 @@
     <!-- ============================================================== -->
     <script src="assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     <script>
-        $(function () {
-            $('#home_page').click(function () {
-                let result;
-                let url=window.location.search;
-                if(url.indexOf("?")!==-1){
-                    result = url.substr(url.indexOf("=")+1);
-                }
-                window.location.href='table-basic.html?values='+result;
-            })
-        })
+
     </script>
 </body>
 

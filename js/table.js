@@ -113,15 +113,10 @@ function showNewTable(data){
             button.className='response';
             button.innerHTML='edit';
             button.onclick=function(){
-                let result;
-                let url=window.location.search;
-                if(url.indexOf("?")!==-1){
-                    result = url.substr(url.indexOf("=")+1);
-                }
                 let td=$(this).parent();
                 let index=td.parent()[0].rowIndex;
                 let orderNumber=$('tr').eq(index).children('td').eq(1).text();
-                window.location.href='table-content.html?values='+result+'&order='+orderNumber;
+                window.location.href='table-content.html?order='+orderNumber;
             };
             attr.appendChild(button);
         }
@@ -149,12 +144,11 @@ $('.srh-btn').click(function () {
                 showNewTable(data);
             } else if (data.status_code === 'None') {//没有结果
                 document.getElementById('result').innerHTML = 'No such order number.';
-                let time = setTimeout(function(){//定时器
+                setTimeout(function(){//定时器
 
                         document.getElementById('result').innerHTML = '';
                     },
                     3000);//设置三千毫秒即3秒
-                clearTimeout(time);
             }
         }
     });

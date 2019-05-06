@@ -1,14 +1,10 @@
 window.onload=function () {
 
-    let result;
-    let url=window.location.search;
-    if(url.indexOf("?")!==-1){
-        result = url.substr(url.indexOf("=")+1);
 
-    }
-    let text = {"type": 'employee','name':result};
+    let username = window.localStorage.getItem('username');
+    let text = {"type": 'employee','name':username};
     let account = document.getElementById('account');
-    account.innerHTML = result;
+    account.innerHTML = username;
 
     $.ajax({
 
@@ -23,8 +19,6 @@ window.onload=function () {
             if (data.status_code === 100200) {
                 alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
             } else if (data.status_code === 'success') {
-
-
                 showInfo(data)
             } else if (data.status_code === 100220) {
                 alert("Password Wrong");
@@ -43,6 +37,9 @@ function showInfo(data) {
     $('#email').val(data.email);
     $('#phone').val(data.phone);
     $('#password').val(data.password);
+    document.getElementById('image1').src=data.photo;
+    document.getElementById('image2').src=data.photo;
+
     if(data.country==='CHINA'){
         // document.getElementById('country').value='0';
         $('#country').val(0)
@@ -56,11 +53,7 @@ function showInfo(data) {
 $( function () {
     $('#update').click(function (e) {
         e.preventDefault();
-        let result;
-        let url=window.location.search;
-        if(url.indexOf("?")!==-1){
-            result = url.substr(url.indexOf("=")+1);
-        }
+        let username = window.localStorage.getItem('username');
         let fname = $('#firstName').val();
         let lname = $('#lastName').val();
         let email = $("#email").val();
@@ -72,9 +65,9 @@ $( function () {
         }else if(country==='1'){
              coun='IRELAND';
         }
-
+        console.log(username);
         let password = $('#password').val();
-        let text = {'type':'employee','name':result,'firstName':fname,'lastName':lname,'password':password, 'email': email, 'phone': phone, 'country':coun};
+        let text = {'type':'employee','name':username,'firstName':fname,'lastName':lname,'password':password, 'email': email, 'phone': phone, 'country':coun};
         $.ajax({
             type: "POST",
             url: 'http://10.19.42.253:5000/account/update_account_details',
@@ -88,8 +81,7 @@ $( function () {
                 if (data.status_code === 100200) {
                     alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
                 } else if (data.status === 'success') {
-                    alert("Update succeed!");
-                    window.location.href='pages-profile.html?values='+result;
+                    window.location.href='pages-profile.html';
                 } else if (data.status_code === 100220) {
                     alert("Password Wrong");
                 }

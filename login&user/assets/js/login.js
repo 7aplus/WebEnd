@@ -127,8 +127,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
             success: function (data) {
 
                 if(data.status_code  == 100200){
-                    // 100200不知道咋错了，100211成功 100220密码错误
-                    error_message.innerHTML = "error!";
+                    error_message.innerHTML = "Select your role.";
                 }
                 else if(data.status_code  == 100211){
                     window.localStorage.setItem("username", username);

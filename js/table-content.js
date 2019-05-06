@@ -1,26 +1,12 @@
 window.onload=function () {
-    // let result;
-    // let url=window.location.search;
-    // if(url.indexOf("?")!==-1){
-    //     result = url.substr(url.indexOf("=")+1);
-    // }
-    var url=window.location.search;
-    let strs;
-    let key;
-    let value;
-    if (url.indexOf("?") !== -1) {
-        var str = url.substr(1);
-        strs = str.split("&");
-        key = new Array(strs.length);
-        value = new Array(strs.length);
-        for (let i = 0; i < strs.length; i++) {
-            key[i] = strs[i].split("=")[0];
-            value[i] = unescape(strs[i].split("=")[1]);
-        }
+    let result;
+    let url=window.location.search;
+    if(url.indexOf("?")!==-1){
+        result = url.substr(url.indexOf("=")+1);
     }
 
 
-    let text = {"query": value[1]};
+    let text = {"query": result};
 
     $.ajax({
         type: "POST",
@@ -67,7 +53,6 @@ function showTable(data){
 $(function() {
 
     $("#submitForm").click(function(){
-       // window.location.href='table-basic.html?index='+manyValues()+"&status="+$("input[type='radio']:checked").val();
         let result;
         let url=window.location.search;
         if(url.indexOf("?")!==-1){
@@ -79,7 +64,7 @@ $(function() {
         let text = {"orderId": result,"operate": radio, "text" : feedback};
 
         if (radio==='reject' && feedback==null){
-            alert("You should give some feedback for your rejection!");
+            // alert("You should give some feedback for your rejection!");
         }else{
             $.ajax({
                 type: "POST",

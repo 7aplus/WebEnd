@@ -58,7 +58,7 @@ $(function() {
         let feedback= $("textarea[type='text']").val();
 
         let text = {"orderId": result,"operate": radio, "text" : feedback};
-
+        alert(result+radio+feedback);
         if (radio==='reject' && feedback==null){
             alert("You should give some feedback for your rejection!");
         }else{
