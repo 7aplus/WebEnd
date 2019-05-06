@@ -61,7 +61,8 @@ $("#upload").on('click', function (e) {
     var l_name = $("#l_name").val();
     var email = $("#email").val();
     var phone_num = $("#phone_num").val();
-    var country = $("#country").val();
+    var country = $("#country").find("option:selected").text();
+    alert(country);
     var password = $("#password").val();
 
     var text = {
@@ -85,7 +86,7 @@ $("#upload").on('click', function (e) {
         cache: false,
         processData: false,
         success: function (data) {
-            alert("Success");
+            // alert("Success");
 
 
         }
