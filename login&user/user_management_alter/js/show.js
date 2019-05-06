@@ -85,6 +85,9 @@ $.ajax({
             } else if (data.reports[i].status == (-1)) {
                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Reject</td><td>" + data.reports[i].feedback + "</td></tr>");
             }
+            else{
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td>Waitting</td><td>" + data.reports[i].feedback + "</td></tr>");
+            }
 
         }
 

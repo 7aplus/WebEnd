@@ -18,6 +18,7 @@ function getType(){
 }
 
 var username = window.localStorage.getItem("username");
+
 $(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />"+username);
 
 
@@ -37,7 +38,7 @@ function GetExtensionFileName(pathfilename) {
     return arr2[arr2.length - 1];                   //将后缀名返回出来
 }
 
-let srcData;
+let srcData=' ';
 function fileBase64() {
     let filesSelected = document.getElementById("picture").files;
     if (filesSelected.length > 0) {
@@ -63,6 +64,7 @@ function fileBase64() {
         fileReader.readAsDataURL(fileToLoad);
     }
 }
+
 //上传图片最大值(单位字节)（ 2 M = 2097152 B ）超过2M上传失败
 
 
@@ -95,7 +97,8 @@ btn.addEventListener('click',function(e){
     // }
     // else{
         // set the data message
-        var srcdta1='null';
+        var srcdat=' ';
+        alert(srcData.toString());
         var text = { "username": username, "location": location ,"time":time, "message":message,'photo':srcData.toString()};
 
         $.ajax({
@@ -108,12 +111,14 @@ btn.addEventListener('click',function(e){
             processData: false,
             success: function (data) {
                 alert('success');
+
                 var jsonArray = JSON.parse(data);
                 if(jsonArray.status_code  == 100200){
                     alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
                 }
                 else if(jsonArray.status_code  == 100211){
-                    window.location.href = "../../management model/user_manage/index.html";
+                    alert("Success!");
+                    window.location.href = "user_managment_alter.html";
                 }
                 else if(jsonArray.status_code  == 100220){
                     alert("Password Wrong");
