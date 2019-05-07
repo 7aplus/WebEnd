@@ -68,40 +68,61 @@ var text = {
     "username": username
 }
 var data_each;
-// $.ajax({
-//     type: "POST",
-//     url: 'http://10.19.42.253:5000/report/get_someone_report',
-//     data: JSON.stringify(text),
-//     contentType: "application/jason; charset=UTF-8",
-//     async: false,
-//     cache: false,
-//     processData: false,
-//     success: function (data) {
-//         var len = data.reports.length;
-//         var i;
-//         for (i = 0; i < len; i++) {
-//             if (data.reports[i].status == 1) {
-//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button class='response'>edit</button></td></tr>");
-//             } else if (data.reports[i].status == (-1)) {
-//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Waitting</span></td><td><button class='response'>edit</button></td></tr>");
-//             }
-//             else{
-//                 $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Reject</span></td><td><button class='response'>edit</button></td></tr>");
-//             }
-//
-//         }
-//
-//     }
-// })
+$.ajax({
+    type: "POST",
+    url: 'http://10.19.42.253:5000/report/get_someone_report',
+    data: JSON.stringify(text),
+    contentType: "application/jason; charset=UTF-8",
+    async: false,
+    cache: false,
+    processData: false,
+    success: function (data) {
+        var len = data.reports.length;
+        var i;
+        for (i = 0; i < len; i++) {
+            if (data.reports[i].status == 1) {
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+            } else if (data.reports[i].status == (-1)) {
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Waitting</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+            }
+            else{
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Reject</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+            }
+            function test(element){
+                $("#modal").modal("show");
+                $("#detail").html(data.feedback[i]);
+                console.log(element.id);
+            }
+        }
+
+    }
+})
 //测试
-$("#info_tbody").append("<tr>  <td>aaaa</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button class='btn-primary radius table_detail'>edit</button></td></tr>");
+
+var list = ["a","b"]
+for(i=0;i<2;i++){
+    $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+
+}
+
+
+
+console.log($("#0").parent().siblings().first.text).
+
+
+$("#info_tbody").append("<tr>  <td>bbb</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button class='btn-primary radius table_detail'>edit</button></td></tr>");
+
+
 
 var a = "testing part";
 
 
 $(".table_detail").click(function () {
     $("#modal").modal("show");
-    $("#test").html(a);
+    var td = $(".table_detail").parent().siblings()[0];
+    // var index = td.parent()[0].rowIndex
+    console.log(td);
+
 })
 
 
