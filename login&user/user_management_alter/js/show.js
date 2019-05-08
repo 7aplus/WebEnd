@@ -99,11 +99,11 @@ $.ajax({
 })
 //测试
 
-var list = ["a","b"]
-for(i=0;i<2;i++){
-    $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
-
-}
+// var list = ["a","b"]
+// for(i=0;i<2;i++){
+//     $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+//
+// }
 
 
 

@@ -1,32 +1,32 @@
 //get the username
-$(function(){
+$(function () {
     $("#show").html(oneValues());
 });
-function oneValues(){
+
+function oneValues() {
     let result;
-    let url=window.location.search; //获取url中"?"符后的字串
-    if(url.indexOf("?")!==-1){
-        result = url.substr(url.indexOf("=")+1);
+    let url = window.location.search; //获取url中"?"符后的字串
+    if (url.indexOf("?") !== -1) {
+        result = url.substr(url.indexOf("=") + 1);
     }
     return result;
 }
 
 
-function getType(){
+function getType() {
     var type = window.localStorage.getItem("type");
     return type;
 }
 
 var username = window.localStorage.getItem("username");
 
-$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />"+username);
+$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />" + username);
 
 
-$("#home_page").attr("href","user_managment_alter.html?username="+username);
-$("#report_page").attr("href","table-report.html?username="+username);
-$("#profile_page").attr("href","pages-profile.html?username="+username);
-$("#home_link").attr("href","user_managment_alter.html?username="+username);
-
+$("#home_page").attr("href", "user_managment_alter.html?username=" + username);
+$("#report_page").attr("href", "table-report.html?username=" + username);
+$("#profile_page").attr("href", "pages-profile.html?username=" + username);
+$("#home_link").attr("href", "user_managment_alter.html?username=" + username);
 
 
 function GetExtensionFileName(pathfilename) {
@@ -38,7 +38,8 @@ function GetExtensionFileName(pathfilename) {
     return arr2[arr2.length - 1];                   //将后缀名返回出来
 }
 
-let srcData=' ';
+let srcData = ' ';
+
 function fileBase64() {
     let filesSelected = document.getElementById("picture").files;
     if (filesSelected.length > 0) {
@@ -46,16 +47,16 @@ function fileBase64() {
 
         let fileReader = new FileReader();
 
-        fileReader.onload = function(fileLoadedEvent) {
-            if (fileToLoad.size < 2100000 && (GetExtensionFileName(fileToLoad.name)==='jpg'||GetExtensionFileName(fileToLoad.name)==='png')){
+        fileReader.onload = function (fileLoadedEvent) {
+            if (fileToLoad.size < 2100000 && (GetExtensionFileName(fileToLoad.name) === 'jpg' || GetExtensionFileName(fileToLoad.name) === 'png')) {
                 alert("agree");
                 srcData = fileLoadedEvent.target.result; // <--- data: base64
 
                 let newImage = document.createElement('img');
                 newImage.src = srcData;
-            }else if(GetExtensionFileName(fileToLoad.name)!=='jpg'||'png'){
+            } else if (GetExtensionFileName(fileToLoad.name) !== 'jpg' || 'png') {
                 alert('You should upload a picture in .jpg or .png');
-            }else if (fileToLoad.size > 2100000) {
+            } else if (fileToLoad.size > 2100000) {
                 alert('The picture is too large.')
             }
 
@@ -69,7 +70,7 @@ function fileBase64() {
 
 
 var btn = document.getElementById("report_btn");
-btn.addEventListener('click',function(e){
+btn.addEventListener('click', function (e) {
     e.preventDefault();
     //get three information
     var location = document.getElementById("location").value;
@@ -96,43 +97,46 @@ btn.addEventListener('click',function(e){
     //     alert('the picture size has to be less than 100kb');
     // }
     // else{
-        // set the data message
-        var srcdat=' ';
-        alert(srcData.toString());
-        var text = { "username": username, "location": location ,"time":time, "message":message,'photo':srcData.toString()};
+    // set the data message
+    var srcdat = ' ';
+    alert(srcData.toString());
+    var text = {
+        "username": username,
+        "location": location,
+        "time": time,
+        "message": message,
+        'photo': srcData.toString()
+    };
 
-        $.ajax({
-            type: "POST",
-            url: 'http://10.19.42.253:5000/report/create_report',
-            data: JSON.stringify(text),
-            contentType: "application/jason; charset=UTF-8",
-            async: false,
-            cache: false,
-            processData: false,
-            success: function (data) {
-                alert('success');
+    $.ajax({
+        type: "POST",
+        url: 'http://10.19.42.253:5000/report/create_report',
+        data: JSON.stringify(text),
+        contentType: "application/jason; charset=UTF-8",
+        async: false,
+        cache: false,
+        processData: false,
+        success: function (data) {
+            alert('success');
 
-                var jsonArray = JSON.parse(data);
-                if(jsonArray.status_code  == 100200){
-                    alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
-                }
-                else if(jsonArray.status_code  == 100211){
-                    alert("Success!");
-                    window.location.href = "user_managment_alter.html";
-                }
-                else if(jsonArray.status_code  == 100220){
-                    alert("Password Wrong");
-                }
-
+            var jsonArray = JSON.parse(data);
+            if (jsonArray.status_code == 100200) {
+                alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
             }
-        })
+            else if (jsonArray.status_code == 100211) {
+                alert("Success!");
+                window.location.href = "user_managment_alter.html";
+            }
+            else if (jsonArray.status_code == 100220) {
+                alert("Password Wrong");
+            }
+
+        }
+    })
     // }
 
 
-
-
     //get the text of the json object
-
 
 
 });
@@ -167,13 +171,15 @@ function switchLanguage() {
         $("#little-title").html("上报");
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
-        $("#basic_form").children("label").each(function(i, item) {
+        $("#basic_form").children("label").each(function (i, item) {
             $(item).text(table_zh[i]);
         });
         $("#report_btn").text("提交");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>上报");
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+
+
     } else {
         $("#table_head").children("th").each(function (i, item) {
             $(item).text(table_en[i]);
@@ -183,7 +189,7 @@ function switchLanguage() {
         $("#home_link").html("Home");
         $(".card-title").html("Basic Form");
         $("#switch_language_btn").html("switch language");
-        $("#basic_form").children("label").each(function(i, item) {
+        $("#basic_form").children("label").each(function (i, item) {
             $(item).text(table_en[i]);
         });
         $("#report_btn").text("Submit");
@@ -192,4 +198,5 @@ function switchLanguage() {
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
     }
 }
+
 switchLanguage();

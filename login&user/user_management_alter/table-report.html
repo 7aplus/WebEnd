@@ -14,15 +14,27 @@
     <!-- Bootstrap Core CSS -->
     <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
+
+    <!--载入font-awesome-->
+    <link rel="stylesheet" href="assets/plugins/font-awesome">
+
     <link href="css/button.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
     <link href="css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="css/table.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <![endif]-->
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
 </head>
 
 <body class="fix-header card-no-border">
@@ -89,16 +101,19 @@
                 <ul id="sidebarnav">
                     <li>
                     <li>
-                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10"
-                                                                                    aria-hidden="true"></i>Basic
+                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i
+                                class="fa fa-table m-r-10"
+                                aria-hidden="true"></i>Basic
                             Table</a>
                     </li>
                     <li>
-                        <a href="table-report-1.html" class="waves-effect" id="report_page"><i class="fa fa-table m-r-10"
-                                                                            aria-hidden="true"></i>Report</a>
+                        <a href="table-report-1.html" class="waves-effect" id="report_page"><i
+                                class="fa fa-table m-r-10"
+                                aria-hidden="true"></i>Report</a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10"
+                                                                                               aria-hidden="true"></i>Profile</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -133,17 +148,25 @@
                             <h3 class="card-title">Basic Form</h3>
                             <h6 class="card-subtitle">Add class <code>.table</code></h6>
                             <div class="form-group">
-                                <form class="form-horizontal form-material" id="basic_form">
-                                    <label>Location:</label>
-                                    <input type="text" id="location" class="form-control form-control-line">
+                                <form class="form-horizontal form-material" role="form" id="basic_form">
+
+                                    <div class="form-group has-success has-feedback">
+                                        <label>Location:</label>
+                                        <input type="text" id="location" class="form-control form-control-line">
+                                        <i class="fa fa-check-square" hidden="hidden"></i>使用列表类图标
+                                    </div>
+
                                     <label>Time</label>
                                     <input type="date" id="time" class="form-control form-control-line">
                                     <label>Picture</label>
                                     <input type="file" id="picture" class="form-control" onchange="fileBase64();">
                                     <div id="imgTest"></div>
                                     <img class="head-img">
-                                    <label>Message</label>
-                                    <textarea id="message" class="form-control" rows="5"></textarea>
+                                    <div class="form-group has-success has-feedback">
+                                        <label>Message</label>
+                                        <textarea id="message" class="form-control" rows="5"></textarea>
+                                    </div>
+
                                     <div class="form-group">
                                         <div class="col-sm-12">
                                             <button class="btn btn-success" id="report_btn">Submit</button>
@@ -151,6 +174,7 @@
                                     </div>
                                     <!--<button id="report_btn" class="btn-primary">Send</button>-->
                                 </form>
+
                             </div>
                         </div>
                     </div>
