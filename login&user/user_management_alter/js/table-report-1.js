@@ -24,6 +24,23 @@ $("#insurance_1").on('click',function () {
 })
 
 
+//renew 功能
+//首先给后端发ajax
+
+//解析后端数据
+
+//
+function drawModal(element){
+    var id = element.id;
+    $("#modal").modal("show");
+    if (id == "type1"){
+        $(".modal-title").html("Travel Insurance");
+
+    }
+}
+
+
+
 //双语切换部分
 $("#switch_language_btn").on('click', function () {
     //将语言的缓存存为zh，表示中文

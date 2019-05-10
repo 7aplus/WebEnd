@@ -141,7 +141,7 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_1"></a></li>
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a href="#" class="fa fa-link" id="type1" onclick="drawModal(this)"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -157,7 +157,7 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_2"></a></li>
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a href="#" class="fa fa-link" id="type2"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -174,7 +174,7 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_3"></a></li>
-                                        <li><a href="#" class="fa fa-link"></a></li>
+                                        <li><a href="#" class="fa fa-link" id="type3" ></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -183,6 +183,32 @@
                 </div>
             </div>
 
+
+
+        </div>
+<!--不同种类的保险展示的modal-->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Insurance Detail</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-label="true">&times;</span>
+                        </button>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label class="col-md-12 form_1">Details:</label>
+                            <h id="detail"></h>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Confirm</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <footer class="footer text-center">
