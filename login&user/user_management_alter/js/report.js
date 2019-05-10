@@ -141,6 +141,49 @@ btn.addEventListener('click', function (e) {
 
 });
 
+//正则判断部分
+var strRegex = "[a-z0-9A-Z]+";
+var re=new RegExp(strRegex);
+$("#location1").on('blur',function () {
+    $("#location_span").removeAttr("hidden");
+    if (re.test($("#location1").val()) == true){
+        $("#location_div").removeAttr("class");
+        $("#location_div").addClass(" form-group has-feedback has-success ");
+        $("#location_icon").removeAttr("class");
+        $("#location_icon").addClass("fa fa-check-square fa-2x");
+    }
+    else{
+        $("#location_div").removeAttr("class");
+        $("#location_div").addClass(" form-group has-feedback has-danger");
+        $("#location_icon").removeAttr("class");
+        $("#location_icon").addClass("fa fa-close fa-2x");
+    }
+})
+
+$("#message").on('blur',function () {
+    $("#message_span").removeAttr("hidden");
+    if (re.test($("#message").val()) == true){
+        $("#message_div").removeAttr("class");
+        $("#message_div").addClass(" form-group has-feedback has-success ");
+        $("#message_icon").removeAttr("class");
+        $("#message_icon").addClass("fa fa-check-square fa-2x");
+    }
+    else{
+        $("#message_div").removeAttr("class");
+        $("#message_div").addClass(" form-group has-feedback has-danger");
+        $("#message_icon").removeAttr("class");
+        $("#message_icon").addClass("fa fa-close fa-2x");
+        console.log("into it")
+    }
+})
+
+
+
+
+
+
+
+
 
 //切换语言
 $("#switch_language_btn").on('click', function () {
