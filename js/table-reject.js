@@ -128,31 +128,43 @@ function showNewTable(data){
 
 $('.srh-btn').click(function () {
     let search = document.getElementById('search').value;
-    let text = {"search": search};
-    $.ajax({
-        type: "POST",
-        url: 'http://10.19.42.253:5000/report/search_report',
-        data: JSON.stringify(text),
-        contentType: "application/jason; charset=UTF-8",
-        async: false,
-        cache: false,
-        processData: false,
-        success: function (data) {
+    let reg1 = /^[0-9]*$/;
+    let reg2 = /^\d{n,}$/;
+    if (!reg1.test(search) || !reg2.test(search)){
+        document.getElementById('result').innerHTML = 'The format of order number is invalid.';
+        setTimeout(function(){//定时器
 
-            if (data.status_code === 'success') {//有该订单 显示
-                $('tbody').html('');
-                showNewTable(data);
-            } else if (data.status_code === 'None') {//没有结果
-                document.getElementById('result').innerHTML = 'No such order number.';
-                let time = setTimeout(function(){//定时器
+                document.getElementById('result').innerHTML = '';
+            },
+            3000);//设置三千毫秒即3秒
+        return false;
+    }else{
+        let text = {"search": search};
+        $.ajax({
+            type: "POST",
+            url: 'http://10.19.42.253:5000/report/search_report',
+            data: JSON.stringify(text),
+            contentType: "application/jason; charset=UTF-8",
+            async: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
 
-                        document.getElementById('result').innerHTML = '';
-                    },
-                    3000);//设置三千毫秒即3秒
-                clearTimeout(time);
+                if (data.status_code === 'success') {//有该订单 显示
+                    $('tbody').html('');
+                    showNewTable(data);
+                } else if (data.status_code === 'None') {//没有结果
+                    document.getElementById('result').innerHTML = 'No such order number.';
+                    setTimeout(function(){//定时器
+
+                            document.getElementById('result').innerHTML = '';
+                        },
+                        3000);//设置三千毫秒即3秒
+                }
             }
-        }
-    });
+        });
+    }
+
 });
 //switch language
 $("#switch_language_btn").on('click', function () {
