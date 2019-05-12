@@ -63,10 +63,13 @@ function switchLanguage() {
 }
 switchLanguage();
 
+
 //首先想api发送请求
 var text = {
     "username": username
 }
+var feedbacks = new Array();
+
 var data_each;
 $.ajax({
     type: "POST",
@@ -79,42 +82,57 @@ $.ajax({
     success: function (data) {
         var len = data.reports.length;
         var i;
+
+
+        for(i=0; i<len;i++){
+
+            feedbacks[i] = data.reports[i].feedback;
+            console.log()
+        }
+
+
+
         for (i = 0; i < len; i++) {
             if (data.reports[i].status == 1) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
             } else if (data.reports[i].status == (-1)) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Waitting</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Reject</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
             }
-            else{
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Reject</span></td><td><button id='\"+i+\"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
-            }
-            function test(element){
-                $("#modal").modal("show");
-                $("#detail").html(data.feedback[i]);
-                console.log(element.id);
+            else {
+                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Waiting</span></td><td>No feedback</td></tr>");
             }
         }
+
+
 
     }
 })
 //测试
 
+function test(element,data){
+    $("#modal").modal("show");
+    var id = element.id;
+    console.log(data[id]);
+    $("#detail").html(data[id]);
+    // console.log(id);
+}
+
 // var list = ["a","b"]
 // for(i=0;i<2;i++){
-//     $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this)' class='btn-primary radius table_detail'>edit</button></td></tr>");
+//     $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,list)' class='btn-primary radius table_detail'>edit</button></td></tr>");
 //
 // }
 
 
 
-console.log($("#0").parent().siblings().first.text).
+// console.log($("#0").parent().siblings().first.text).
 
 
-$("#info_tbody").append("<tr>  <td>bbb</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button class='btn-primary radius table_detail'>edit</button></td></tr>");
+// $("#info_tbody").append("<tr>  <td>bbb</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button class='btn-primary radius table_detail'>edit</button></td></tr>");
 
 
 
-var a = "testing part";
+// var a = "testing part";
 
 
 $(".table_detail").click(function () {

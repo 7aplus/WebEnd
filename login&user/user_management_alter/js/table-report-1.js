@@ -40,8 +40,8 @@ var text = {
 //     processData: false,
 //     //解析后端代码，对页面做出反馈
 //     success: function (data) {
-//         $("#description_1").html("You ")
-//
+//         // $("#description_1").html("You ")
+//         $("#expire_date").html();
 //     }
 // })
 
