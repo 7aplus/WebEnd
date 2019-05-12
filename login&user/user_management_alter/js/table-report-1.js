@@ -30,20 +30,20 @@ var text = {
     "username":username,
 };
 
-$.ajax({
-    type: "POST",
-    url: 'http://10.19.42.253:5000/report/get_someone_report',
-    data: JSON.stringify(text),
-    contentType: "application/jason; charset=UTF-8",
-    async: false,
-    cache: false,
-    processData: false,
-    //解析后端代码，对页面做出反馈
-    success: function (data) {
-
-
-    }
-})
+// $.ajax({
+//     type: "POST",
+//     url: 'http://10.19.42.253:5000/report/get_someone_report',
+//     data: JSON.stringify(text),
+//     contentType: "application/jason; charset=UTF-8",
+//     async: false,
+//     cache: false,
+//     processData: false,
+//     //解析后端代码，对页面做出反馈
+//     success: function (data) {
+//         $("#description_1").html("You ")
+//
+//     }
+// })
 
 function drawModal(element){
     var id = element.id;
@@ -53,10 +53,10 @@ function drawModal(element){
 
     }
     else if(id == "type2"){
-        $(".modal-title").html("Travel Insurance");
+        $(".modal-title").html("Personal Insurance");
     }
     else if(id == "type3"){
-        $(".modal-title").html("Travel Insurance");
+        $(".modal-title").html("Comprehensive Accident Insurance");
     }
 }
 
