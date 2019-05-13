@@ -7,8 +7,9 @@
       <change beforePath="$PROJECT_DIR$/js/table-reject.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/table-reject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/table-waiting.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/table-waiting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table-approval.html" beforeDir="false" afterPath="$PROJECT_DIR$/table-approval.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table-basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/table-basic.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table-reject.html" beforeDir="false" afterPath="$PROJECT_DIR$/table-reject.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table-waiting.html" beforeDir="false" afterPath="$PROJECT_DIR$/table-waiting.html" afterDir="false" />
     </list>
@@ -27,40 +28,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table-basic.html">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="75" selection-start-line="75" selection-end-line="79" selection-end-column="29" />
-              <folding>
-                <element signature="n#style#0;n#h6#0;n#form#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table-content.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+            <state relative-caret-position="276">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/table.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="170" column="37" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+            <state relative-caret-position="594">
+              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -148,30 +128,30 @@
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html" />
         <option value="$PROJECT_DIR$/table-content.html" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/profile.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-content.js" />
         <option value="$PROJECT_DIR$/js/table-content.js" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/scss/style.scss" />
-        <option value="$PROJECT_DIR$/table-basic.html" />
         <option value="$PROJECT_DIR$/login&amp;user/assets/js/login.js" />
         <option value="$PROJECT_DIR$/pages-profile.html" />
         <option value="$PROJECT_DIR$/js/profile.js" />
+        <option value="$PROJECT_DIR$/table-basic.html" />
         <option value="$PROJECT_DIR$/table-approval.html" />
         <option value="$PROJECT_DIR$/table-reject.html" />
         <option value="$PROJECT_DIR$/table-waiting.html" />
+        <option value="$PROJECT_DIR$/js/table.js" />
         <option value="$PROJECT_DIR$/js/table-approval.js" />
         <option value="$PROJECT_DIR$/js/table-reject.js" />
         <option value="$PROJECT_DIR$/js/table-waiting.js" />
-        <option value="$PROJECT_DIR$/js/table.js" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="561" />
+    <option name="x" value="599" />
     <option name="y" value="23" />
-    <option name="width" value="879" />
+    <option name="width" value="841" />
     <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -182,6 +162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,13 +173,25 @@
             <path>
               <item name="WebEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="WebEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management_alter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management_alter" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -210,7 +203,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555652092726" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IR/as1" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IR/as1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -282,7 +275,8 @@
       <workItem from="1557103714036" duration="3646000" />
       <workItem from="1557108186619" duration="1722000" />
       <workItem from="1557139110531" duration="7082000" />
-      <workItem from="1557577728623" duration="1894000" />
+      <workItem from="1557577728623" duration="2079000" />
+      <workItem from="1557709817203" duration="1622000" />
     </task>
     <task id="LOCAL-00001" summary="test git">
       <created>1555383335058</created>
@@ -417,17 +411,24 @@
       <option name="project" value="LOCAL" />
       <updated>1557147267077</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Search box update">
+      <created>1557580444662</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557580444662</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92398000" />
+    <option name="totallyTimeSpent" value="94205000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="561" y="23" width="879" height="808" extended-state="0" />
+    <frame x="599" y="23" width="841" height="808" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.21561772" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.22560975" />
       <window_info id="Structure" order="1" sideWeight="0.50142854" side_tool="true" weight="0.23902027" />
       <window_info id="Favorites" order="2" sideWeight="0.50142854" side_tool="true" weight="0.21802774" />
       <window_info id="Image Layers" order="3" />
@@ -522,7 +523,8 @@
     <MESSAGE value="搜索功能" />
     <MESSAGE value="debug3" />
     <MESSAGE value="Debug 5.6 pm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug 5.6 pm" />
+    <MESSAGE value="Search box update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search box update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -549,7 +551,7 @@
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/men.html" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/index.html" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-basic.html" />
-    <entry file="file://$PROJECT_DIR$/../Downloads/5cbebf553bc4a/css/element.min.css" />
+    <entry file="file://$USER_HOME$/Downloads/5cbebf553bc4a/css/element.min.css" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/css/element.min.css" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/css/less/css.less" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/css/less/style.less" />
@@ -604,13 +606,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/button.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="97" column="25" selection-start-line="97" selection-end-line="98" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,13 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/assets/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2852">
-          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages-profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -686,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2248">
@@ -700,78 +681,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/table-content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1656">
+          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/assets/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2852">
+          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table-waiting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="164" column="29" lean-forward="true" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table-reject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/table-approval.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="77" column="31" lean-forward="true" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#form#0;n#li#1;n#ul#0;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="500">
+          <caret line="168" lean-forward="true" selection-start-line="168" selection-end-line="168" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/table-basic.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="75" selection-start-line="75" selection-end-line="79" selection-end-column="29" />
+        <state relative-caret-position="515">
+          <caret line="166" column="29" lean-forward="true" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#h6#0;n#form#0;n#li#0;n#ul#0;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table-waiting.html">
+    <entry file="file://$PROJECT_DIR$/js/table.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#form#0;n#li#1;n#ul#0;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table-reject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="n#style#0;n#h6#0;n#form#0;n#li#1;n#ul#0;n#div#1;n#nav#0;n#header#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/table-waiting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="152" column="45" selection-start-line="152" selection-start-column="45" selection-end-line="152" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/table-reject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="909">
-          <caret line="167" column="3" selection-start-line="167" selection-start-column="3" selection-end-line="167" selection-end-column="3" />
+        <state relative-caret-position="226">
+          <caret line="130" column="28" selection-start-line="130" selection-start-column="28" selection-end-line="130" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/table-approval.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="139" column="21" lean-forward="true" selection-start-line="139" selection-start-column="21" selection-end-line="139" selection-end-column="21" />
+        <state relative-caret-position="288">
+          <caret line="136" column="14" lean-forward="true" selection-start-line="136" selection-start-column="14" selection-end-line="136" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/table-content.html">
+    <entry file="file://$PROJECT_DIR$/js/table-reject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        <state relative-caret-position="394">
+          <caret line="135" column="39" lean-forward="true" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/table.js">
+    <entry file="file://$PROJECT_DIR$/js/table-waiting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="170" column="37" selection-start-line="170" selection-start-column="37" selection-end-line="170" selection-end-column="37" />
+        <state relative-caret-position="183">
+          <caret line="129" column="41" selection-start-line="129" selection-start-column="41" selection-end-line="129" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
         </state>
       </provider>
     </entry>

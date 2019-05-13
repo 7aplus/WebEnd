@@ -128,9 +128,8 @@ function showNewTable(data){
 
 $('.srh-btn').click(function () {
     let search = document.getElementById('search').value;
-    let reg1 = /^[0-9]*$/;
-    let reg2 = /^\d{n,}$/;
-    if (!reg1.test(search) || !reg2.test(search)){
+    let reg1 = /^[0-9]{4}$/;
+    if (!reg1.test(search)){
         document.getElementById('result').innerHTML = 'The format of order number is invalid.';
         setTimeout(function(){//定时器
 
