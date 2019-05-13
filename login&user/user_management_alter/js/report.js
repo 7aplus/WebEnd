@@ -73,7 +73,7 @@ var btn = document.getElementById("report_btn");
 btn.addEventListener('click', function (e) {
     e.preventDefault();
     //get three information
-    var location = document.getElementById("location").value;
+    var location = document.getElementById("location1").value;
     var time = document.getElementById("time").value;
     var message = document.getElementById("message").value;
 
@@ -98,8 +98,8 @@ btn.addEventListener('click', function (e) {
     // }
     // else{
     // set the data message
-    var srcdat = ' ';
-    alert(srcData.toString());
+    var srcdat = '';
+    
     var text = {
         "username": username,
         "location": location,
@@ -107,6 +107,7 @@ btn.addEventListener('click', function (e) {
         "message": message,
         'photo': srcData.toString()
     };
+    console.log(srcdat.toString);
 
     $.ajax({
         type: "POST",
@@ -117,17 +118,18 @@ btn.addEventListener('click', function (e) {
         cache: false,
         processData: false,
         success: function (data) {
-            alert('success');
+            console.log(data);
+            // alert('success');
 
-            var jsonArray = JSON.parse(data);
-            if (jsonArray.status_code == 100200) {
+            // var jsonArray = JSON.parse(data);
+            if (data.status_code == 100200) {
                 alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
             }
-            else if (jsonArray.status_code == 100211) {
+            else if (data.status_code == "success") {
                 alert("Success!");
                 window.location.href = "user_managment_alter.html";
             }
-            else if (jsonArray.status_code == 100220) {
+            else if (data.status_code == 100220) {
                 alert("Password Wrong");
             }
 
