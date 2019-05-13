@@ -13,7 +13,7 @@ function oneValues() {
 //获得用户名
 var username = window.localStorage.getItem("username");
 $(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />" + username);
-
+$(".card-title").html(username);
 
 
 
@@ -32,7 +32,7 @@ var text = {
     "type": "user",
     "name": username,
 };
-
+//加载页面
 $.ajax({
     type: "POST",
     url: 'http://10.19.42.253:5000/account/get_account_details',
@@ -49,6 +49,10 @@ $.ajax({
             $("#phone_num").val(data.phone);
             $("#country").val(data.country);
             $("#password").val(data.password);
+            $("#password_confirm").val(data.password);
+
+            //显示自己的名字在头像地下
+            $(".card-subtitle").html(data.firstName+" "+data.lastName);
         }
 
     }
@@ -63,6 +67,7 @@ $("#upload").on('click', function (e) {
     var phone_num = $("#phone_num").val();
     var country = $("#country").find("option:selected").text();
     var password = $("#password").val();
+    var password_confirm = $("#password_confirm").val();
 
     var text = {
         "type": "user",
@@ -76,18 +81,35 @@ $("#upload").on('click', function (e) {
 
     };
 
-    $.ajax({
-        type: "POST",
-        url: 'http://10.19.42.253:5000/account/update_account_details',
-        data: JSON.stringify(text),
-        contentType: "application/jason; charset=UTF-8",
-        async: false,
-        cache: false,
-        processData: false,
-        success: function (data) {
-            alert("Success");
-        }
-    })
+    console.log("pas"+password+" pas_con"+password_confirm);
+    if(password == password_confirm){
+        $.ajax({
+            type: "POST",
+            url: 'http://10.19.42.253:5000/account/update_account_details',
+            data: JSON.stringify(text),
+            contentType: "application/jason; charset=UTF-8",
+            async: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                // console.log(data);
+                if(data.status == "success"){
+                    alert("Upload success");
+                }
+                else{
+                    alert("Error");
+                }
+            }
+        })
+    }
+    else if(password != password_confirm){
+        alert("the two time password have to be same");
+    }
+    else{
+        alert("Error");
+    }
+
+    
 })
 
 $("#switch_language_btn").on('click', function () {
@@ -105,8 +127,8 @@ $("#switch_language_btn").on('click', function () {
 })
 
 function switchLanguage() {
-    var table_zh = ["姓", "名", "邮箱", "密码", "电话", "国籍"];
-    var table_en = ["Firstname", "Lastname", "Email", "Password", "Phone number", "country"];
+    var table_zh = ["姓", "名", "邮箱", "密码","确认密码", "电话", "国籍"];
+    var table_en = ["Firstname", "Lastname", "Email", "Password","Password Confirm", "Phone number", "country"];
     var language_now = window.localStorage.getItem("language");
     if (language_now == "zh") {
         // $(this).text("english")
@@ -114,7 +136,7 @@ function switchLanguage() {
         $("#report-title").text("个人信息");
         $("#little-title").html("个人信息");
         $("#home_link").html("主菜单");
-        $(".card-title").html("主表单");
+        
 
         $(".form_1").each(function (i, item) {
             $(item).text(table_zh[i]);
@@ -130,7 +152,7 @@ function switchLanguage() {
         $("#report-title").text("Report");
         $("#little-title").html("Report");
         $("#home_link").html("Home");
-        $(".card-title").html("Basic Form");
+        
         $("#switch_language_btn").html("switch language");
         $(".form_1").each(function (i, item) {
             $(item).text(table_en[i]);

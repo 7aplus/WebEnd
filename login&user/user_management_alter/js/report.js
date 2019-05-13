@@ -216,7 +216,7 @@ function switchLanguage() {
         $("#little-title").html("上报");
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
-        $("#basic_form").children("label").each(function (i, item) {
+        $("label").each(function (i, item) {
             $(item).text(table_zh[i]);
         });
         $("#report_btn").text("提交");
@@ -226,7 +226,7 @@ function switchLanguage() {
 
 
     } else {
-        $("#table_head").children("th").each(function (i, item) {
+        $("label").each(function (i, item) {
             $(item).text(table_en[i]);
         });
         $("#report-title").text("Report");
