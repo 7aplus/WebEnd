@@ -40,11 +40,13 @@ function showTable(data){
     let time=document.getElementById('time');
     let description=document.getElementById('description');
     let img = document.getElementById('image1');
+    let location = document.getElementById('location');
     order.innerHTML=data.orderid;
     username.innerHTML=data.username;
     firstName.innerHTML=data.firstname;
     lastName.innerHTML=data.lastname;
     time.innerHTML=data.time;
+    location.innerText = data.location;
     description.innerHTML=data.description;
     document.getElementById('image1').src=data.photo;
     img.class= data.photo.toString();
