@@ -60,6 +60,40 @@ function drawModal(element){
     }
 }
 
+//添加renew功能
+$("#renew_btn").on('click',function () {
+    $("#modal").modal("show");
+})
+
+$("#confirm_btn").on('click',function () {
+    if($('#policy_ag_disag').is(':checked')){
+
+        let text = {
+            "username":username
+        }
+        $.ajax({
+            type: "POST",
+            url: 'http://10.19.42.253:5000/report/get_someone_report',
+            data: JSON.stringify(text),
+            contentType: "application/jason; charset=UTF-8",
+            async: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                if(data.status == "success"){
+                    alert("Renew Success!")
+                }
+                else{
+                    alert("Error!")
+                }
+            }
+        })
+    }
+    else{
+        alert("You have to Agree policies before you renewing!")
+    }
+})
+
 
 
 //双语切换部分

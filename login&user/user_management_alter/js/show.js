@@ -68,9 +68,9 @@ switchLanguage();
 var text = {
     "username": username
 }
-var feedbacks = new Array();
+let feedbacks = new Array();
 
-var data_each;
+let data_each;
 $.ajax({
     type: "POST",
     url: 'http://10.19.42.253:5000/report/get_someone_report',
@@ -111,17 +111,11 @@ $.ajax({
 
 function test(element,data){
     $("#modal").modal("show");
-    var id = element.id;
-    console.log(data[id]);
-    $("#detail").html(data[id]);
+    let id = element.id;
+    $("#detail").html("Details: "+data[i]);
     // console.log(id);
 }
 
-// var list = ["a","b"]
-// for(i=0;i<2;i++){
-//     $("#info_tbody").append("<tr>  <td>"+list[i]+"</td>  <td>bbb</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,list)' class='btn-primary radius table_detail'>edit</button></td></tr>");
-//
-// }
 
 
 

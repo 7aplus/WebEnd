@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c730f1a-bc5e-42a0-89c3-3c6555b05615" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/table-content.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/table-content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/images/img-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-blank.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-approval.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-basic.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-reject.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-waiting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,61 +27,109 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1686585996">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="5" />
+          <entry key="js" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="5" />
+          <entry key="JavaScript" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="258" />
+          <entry key="js" value="403" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="258" />
+          <entry key="JavaScript" value="403" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="WebEndFInal" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+            <state relative-caret-position="552">
+              <caret line="24" column="118" selection-start-line="24" selection-start-column="118" selection-end-line="24" selection-end-column="118" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5741#5747#0" expanded="true" />
+                <element signature="n#style#0;n#h4#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table-content.html">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="195" column="77" lean-forward="true" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="77" />
+            <state relative-caret-position="483">
+              <caret line="21" column="118" selection-start-line="21" selection-start-column="118" selection-end-line="21" selection-end-column="118" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/table.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
-              <caret line="170" column="21" lean-forward="true" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
+            <state relative-caret-position="805">
+              <caret line="35" column="118" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="35" selection-end-column="118" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/table-content.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="529">
+              <caret line="23" column="118" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
+              <folding>
+                <element signature="e#6598#6604#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+            <state relative-caret-position="457">
+              <caret line="92" column="64" lean-forward="true" selection-start-line="92" selection-start-column="64" selection-end-line="92" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/assets/js/login.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2852">
-              <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+            <state relative-caret-position="794">
+              <caret line="108" column="2" lean-forward="true" selection-start-line="73" selection-end-line="108" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -91,10 +147,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data-path</find>
-      <find>svg</find>
-      <find>error</find>
-      <find>custom</find>
       <find>fonts</find>
       <find>el-steps</find>
       <find>squ</find>
@@ -121,6 +173,10 @@
       <find>style</find>
       <find>report</find>
       <find>modal</find>
+      <find>body</find>
+      <find>ajax</find>
+      <find>renew</find>
+      <find>bootstrap</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,14 +195,11 @@
         <option value="$PROJECT_DIR$/login&amp;user/assets/js/jquery-3.4.0.min.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/css/table.css" />
         <option value="$PROJECT_DIR$/login&amp;user/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table.js" />
         <option value="$PROJECT_DIR$/login&amp;user/index.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-basic.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/css/less/comp/step.less" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-blank.html" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html" />
         <option value="$PROJECT_DIR$/table-content.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/profile.js" />
@@ -164,13 +217,29 @@
         <option value="$PROJECT_DIR$/js/table-reject.js" />
         <option value="$PROJECT_DIR$/js/table-waiting.js" />
         <option value="$PROJECT_DIR$/js/table.js" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" />
         <option value="$PROJECT_DIR$/js/table-content.js" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/assets/plugins/flot/package.json" />
+      <path value="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/plugins/bootstrap-fileinput-master/package.json" />
+      <path value="$PROJECT_DIR$/login&amp;user/user_management_alter/assets/plugins/flot/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="393" />
@@ -186,20 +255,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="WebEnd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="WebEnd2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd2" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd2" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management_alter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd2" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management_alter" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebEnd2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebEnd2" type="462c0819:PsiDirectoryNode" />
+              <item name="login&amp;user" type="462c0819:PsiDirectoryNode" />
+              <item name="user_management_alter" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,7 +303,7 @@
     <property name="SearchEverywhereHistoryKey" value="google&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557648589148" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557760796431" />
     <property name="last_opened_file_path" value="$USER_HOME$/IR/as1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -284,6 +378,7 @@
       <workItem from="1557139110531" duration="7082000" />
       <workItem from="1557577728623" duration="1894000" />
       <workItem from="1557656689181" duration="3431000" />
+      <workItem from="1557757983409" duration="2809000" />
     </task>
     <task id="LOCAL-00001" summary="test git">
       <created>1555383335058</created>
@@ -429,13 +524,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101900000" />
+    <option name="totallyTimeSpent" value="104709000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="599" y="23" width="841" height="808" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.22560975" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857143" visible="true" weight="0.15351813" />
       <window_info id="Structure" order="1" sideWeight="0.50142854" side_tool="true" weight="0.23902027" />
       <window_info id="Favorites" order="2" sideWeight="0.50142854" side_tool="true" weight="0.21802774" />
       <window_info id="Image Layers" order="3" />
@@ -450,7 +545,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.22857143" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.22801302" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
@@ -513,6 +608,9 @@
       </list>
     </option>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Demo" />
     <MESSAGE value="test git" />
@@ -552,7 +650,6 @@
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-reject.js" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/css/component.css" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/contact.html" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/men.html" />
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_2/index.html" />
@@ -615,13 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/assets/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2852">
-          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -688,31 +778,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html">
+    <entry file="file://$PROJECT_DIR$/assets/images/logo-text.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/images/logo-icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2458">
-          <caret line="309" column="14" selection-start-line="309" selection-start-column="9" selection-end-line="309" selection-end-column="14" />
+        <state relative-caret-position="1817">
+          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html">
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="176" column="81" selection-start-line="176" selection-start-column="76" selection-end-line="176" selection-end-column="81" />
+        <state relative-caret-position="2484">
+          <caret line="108" column="6" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/assets/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2852">
+          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/table-content.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1660">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/table-content.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="195" column="77" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="108" column="2" lean-forward="true" selection-start-line="73" selection-end-line="108" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="457">
+          <caret line="92" column="64" lean-forward="true" selection-start-line="92" selection-start-column="64" selection-end-line="92" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="131" column="81" selection-start-line="131" selection-start-column="81" selection-end-line="131" selection-end-column="81" />
+        <state relative-caret-position="552">
+          <caret line="24" column="118" selection-start-line="24" selection-start-column="118" selection-end-line="24" selection-end-column="118" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -720,62 +858,32 @@
             <element signature="n#style#0;n#h4#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/pages-profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="118" selection-start-line="21" selection-start-column="118" selection-end-line="21" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="35" column="118" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="35" selection-end-column="118" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="141" column="41" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/table-content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="195" column="77" lean-forward="true" selection-start-line="195" selection-start-column="77" selection-end-line="195" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/table.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="170" column="21" lean-forward="true" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="79" column="31" lean-forward="true" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/logo-text.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/logo-icon.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/table-content.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        <state relative-caret-position="529">
+          <caret line="23" column="118" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
+          <folding>
+            <element signature="e#6598#6604#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
