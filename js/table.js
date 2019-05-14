@@ -1,24 +1,24 @@
 window.onload=function () {
-    let text = {"type":"manager"};
-    $.ajax({
-        type: "POST",
-        url: 'http://10.19.42.253:5000/report/get_all_report',
-        data: JSON.stringify(text),
-        contentType: "application/jason; charset=UTF-8",
-        async: false,
-        cache: false,
-        processData: false,
-        success: function (data) {
-            if (data.status_code === 100200) {
-                alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
-            } else if (data.status_code === 'success') {
-                //$('tbody').append('tr');
-               showTable(data);
-            } else if (data.status_code === 100220) {
-                alert("Password Wrong");
-            }
-        }
-    });
+    // let text = {"type":"manager"};
+    // $.ajax({
+    //     type: "POST",
+    //     url: 'http://10.19.42.253:5000/report/get_all_report',
+    //     data: JSON.stringify(text),
+    //     contentType: "application/jason; charset=UTF-8",
+    //     async: false,
+    //     cache: false,
+    //     processData: false,
+    //     success: function (data) {
+    //         if (data.status_code === 100200) {
+    //             alert("ERROR"); // 100200不知道咋错了，100211成功 100220密码错误
+    //         } else if (data.status_code === 'success') {
+    //             //$('tbody').append('tr');
+    //            showTable(data);
+    //         } else if (data.status_code === 100220) {
+    //             alert("Password Wrong");
+    //         }
+    //     }
+    // });
 };
 function showTable(data) {
 
