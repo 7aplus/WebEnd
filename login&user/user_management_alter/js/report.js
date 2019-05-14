@@ -133,7 +133,7 @@ btn.addEventListener('click', function (e) {
 //正则判断部分
 var strRegex = "[a-z0-9A-Z]+";
 var re=new RegExp(strRegex);
-$("#location1").on('blur',function () {
+$("#location").on('blur',function () {
     $("#location_span").removeAttr("hidden");
     if (re.test($("#location1").val()) == true){
         $("#location_div").removeAttr("class");
