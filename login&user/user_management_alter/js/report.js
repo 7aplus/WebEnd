@@ -190,8 +190,8 @@ $("#switch_language_btn").on('click', function () {
 })
 
 function switchLanguage() {
-    var table_zh = ["地点", "时间", "图片", "信息"];
-    var table_en = ["Location", "Time", "Picture", "Message"];
+    var table_zh = ["地点",  "图片", "信息"];
+    var table_en = ["Location", "Picture", "Message"];
     var language_now = window.localStorage.getItem("language");
     if (language_now == "zh") {
         // $(this).text("english")
@@ -203,7 +203,7 @@ function switchLanguage() {
         $("#little-title").html("上报");
         $("#home_link").html("主菜单");
         $(".card-title").html("主表单");
-
+        $('#timelabel').html('时间');
         $("label").each(function (i, item) {
             $(item).text(table_zh[i]);
         });
@@ -221,6 +221,8 @@ function switchLanguage() {
         $("#little-title").html("Report");
         $("#home_link").html("Home");
         $(".card-title").html("Basic Form");
+        $('#timelabel').html('Time');
+
         $("#switch_language_btn").html("switch language");
         $("#basic_form").children("label").each(function (i, item) {
             $(item).text(table_en[i]);
