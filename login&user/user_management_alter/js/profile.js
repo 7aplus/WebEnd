@@ -112,6 +112,7 @@ $("#upload").on('click', function (e) {
     
 })
 
+
 $("#switch_language_btn").on('click', function () {
     //将语言的缓存存为zh，表示中文
     var language_now = window.localStorage.getItem("language");

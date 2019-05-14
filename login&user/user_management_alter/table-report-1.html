@@ -20,6 +20,9 @@
     <link href="css/colors/blue.css" id="theme" rel="stylesheet">
     <link href="css/table.css" rel="stylesheet">
     <link href="css/demo.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -90,16 +93,19 @@
                 <ul id="sidebarnav">
                     <li>
                     <li>
-                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i class="fa fa-table m-r-10"
-                                                                                                   aria-hidden="true"></i>Basic
+                        <a href="user_managment_alter.html" class="waves-effect" id="home_page"><i
+                                class="fa fa-table m-r-10"
+                                aria-hidden="true"></i>Basic
                             Table</a>
                     </li>
                     <li>
-                        <a href="table-report-1.html" class="waves-effect" id="report_page"><i class="fa fa-table m-r-10"
-                                                                                             aria-hidden="true"></i>Report</a>
+                        <a href="table-report-1.html" class="waves-effect" id="report_page"><i
+                                class="fa fa-table m-r-10"
+                                aria-hidden="true"></i>Report</a>
                     </li>
                     <li>
-                        <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10" aria-hidden="true"></i>Profile</a>
+                        <a href="pages-profile.html" class="waves-effect" id="profile_page"><i class="fa fa-user m-r-10"
+                                                                                               aria-hidden="true"></i>Profile</a>
                     </li>
                 </ul>
                 <div class="text-center m-t-30">
@@ -125,11 +131,11 @@
                 </div>
 
             </div>
-            <div class="col-lg-8" style="left: 35%;position: relative" >
-                <h4 style="float: left">Your insurance will expire in &nbsp;</h4>
+            <div class="col-lg-8" style="left: 20%;position: relative">
+                <h4 style="float: left">Your insurance will expire at &nbsp;</h4>
                 <h4 style="float: left;color: red" id="expire_date">five</h4>
-                <h4 style="float: left"> &nbsp;days</h4>
-                <button class="btn btn-primary"style="position: relative;left: 5%">Renew</button>
+                <h4 style="float: left"> &nbsp;</h4>
+                <button class="btn btn-primary" style="position: relative;left: 5%" id="renew_btn">Renew</button>
             </div>
             <div class="demo">
                 <div class="container">
@@ -146,7 +152,8 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_1"></a></li>
-                                        <li><a href="#" class="fa fa-link" id="type1" onclick="drawModal(this)"></a></li>
+                                        <!--<li><a href="#" class="fa fa-link" id="type1" onclick="drawModal(this)"></a>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,7 +169,8 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_2"></a></li>
-                                        <li><a href="#" class="fa fa-link" id="type2" onclick="drawModal(this)"></a></li>
+                                        <!--<li><a href="#" class="fa fa-link" id="type2" onclick="drawModal(this)"></a>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -179,7 +187,8 @@
                                     </p>
                                     <ul class="icon">
                                         <li><a href="#" class="fa fa-search" id="insurance_3"></a></li>
-                                        <li><a href="#" class="fa fa-link" id="type3" onclick="drawModal(this)"></a></li>
+                                        <!--<li><a href="#" class="fa fa-link" id="type3" onclick="drawModal(this)"></a>-->
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -190,26 +199,39 @@
 
         </div>
 
-<!--不同种类的保险展示的modal-->
-        <div class="modal fade" id="modal">
+        <!--不同种类的保险展示的modal-->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">Insurance Detail</h4>
+                        <h4 class="modal-title">Renew Policies:</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-label="true">&times;</span>
                         </button>
 
                     </div>
                     <div class="modal-body">
-                        <div class="form-group">
-                            <label class="col-md-12 form_1">Details:</label>
-                            <h id="detail"></h>
-                        </div>
+                        <!--<div class="form-group">-->
+                        <!--<label class="col-md-12 form_1"></label>-->
+                        <ol>
+                            <li>
+                                <p>Our multi-lingual assistance team can help you when you need it most, connecting
+                                    you with medical treatment and transportation.</p>
+                            </li>
+                            <li>
+                                <p>
+                                    We connect our customers to projects run by established charities so you can fund projects in destinations with the greatest need.
+                                </p>
+                            </li>
+                        </ol>
+
+                        <input type="checkbox" id="policy_ag_disag" style="color: black;">I agree with the policy
+                        <!--</div>-->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Confirm</button>
+                        <button type="button" class="btn btn-primary" id="confirm_btn">Confirm</button>
                     </div>
                 </div>
             </div>

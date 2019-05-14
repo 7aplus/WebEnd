@@ -29,21 +29,24 @@ $("#insurance_1").on('click',function () {
 var text = {
     "username":username,
 };
+console.log(username)
 
-// $.ajax({
-//     type: "POST",
-//     url: 'http://10.19.42.253:5000/report/get_someone_report',
-//     data: JSON.stringify(text),
-//     contentType: "application/jason; charset=UTF-8",
-//     async: false,
-//     cache: false,
-//     processData: false,
-//     //解析后端代码，对页面做出反馈
-//     success: function (data) {
-//         // $("#description_1").html("You ")
-//         $("#expire_date").html();
-//     }
-// })
+
+$.ajax({
+    type: "POST",
+    url: 'http://10.19.42.253:5000/account/get_validity',
+    data: JSON.stringify(text),
+    contentType: "application/jason; charset=UTF-8",
+    async: false,
+    cache: false,
+    processData: false,
+    //解析后端代码，对页面做出反馈
+    success: function (data) {
+        // let date = new Date(data.validity)
+        let time = data.validity
+        $("#expire_date").html(time.slice(0,-12));
+    }
+})
 
 function drawModal(element){
     var id = element.id;
@@ -59,6 +62,41 @@ function drawModal(element){
         $(".modal-title").html("Comprehensive Accident Insurance");
     }
 }
+
+//添加renew功能
+$("#renew_btn").on('click',function () {
+    $("#modal").modal("show");
+})
+
+$("#confirm_btn").on('click',function () {
+    if($('#policy_ag_disag').is(':checked')){
+
+        let text = {
+            "username":username
+        }
+        $.ajax({
+            type: "POST",
+            url: 'http://10.19.42.253:5000/account/update_validity',
+            data: JSON.stringify(text),
+            contentType: "application/jason; charset=UTF-8",
+            async: false,
+            cache: false,
+            processData: false,
+            success: function (data) {
+                if(data.status == "success"){
+                    alert("Renew Success!")
+                    window.location.reload();
+                }
+                else{
+                    alert("Error!")
+                }
+            }
+        })
+    }
+    else{
+        alert("You have to Agree policies before you renewing!")
+    }
+})
 
 
 
