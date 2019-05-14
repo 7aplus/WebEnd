@@ -76,7 +76,7 @@ $("#confirm_btn").on('click',function () {
         }
         $.ajax({
             type: "POST",
-            url: 'http://10.19.42.253:5000/report/get_someone_report',
+            url: 'http://10.19.42.253:5000/account/update_validity',
             data: JSON.stringify(text),
             contentType: "application/jason; charset=UTF-8",
             async: false,
@@ -85,7 +85,7 @@ $("#confirm_btn").on('click',function () {
             success: function (data) {
                 if(data.status == "success"){
                     alert("Renew Success!")
-                    window.reload;
+                    window.location.reload();
                 }
                 else{
                     alert("Error!")
