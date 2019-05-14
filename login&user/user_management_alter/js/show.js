@@ -91,17 +91,32 @@ $.ajax({
         }
 
 
-
-        for (i = 0; i < len; i++) {
-            if (data.reports[i].status == 1) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
-            } else if (data.reports[i].status == (-1)) {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Reject</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
-            }
-            else {
-                $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Waiting</span></td><td>No feedback</td></tr>");
+        let language_now = window.localStorage.getItem("language");
+        if(language_now == "en"){
+            for (i = 0; i < len; i++) {
+                if (data.reports[i].status == 1) {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
+                } else if (data.reports[i].status == (-1)) {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Reject</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>Details</button></td></tr>");
+                }
+                else {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Waiting</span></td><td>No feedback</td></tr>");
+                }
             }
         }
+        else{
+            for (i = 0; i < len; i++) {
+                if (data.reports[i].status == 1) {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-success radius'>Approval</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>细节 </button></td></tr>");
+                } else if (data.reports[i].status == (-1)) {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-danger radius'>Reject</span></td><td><button id='"+i+"'  onclick='test(this,feedbacks)' class='btn-primary radius table_detail'>细节</button></td></tr>");
+                }
+                else {
+                    $("#info_tbody").append("<tr>  <td>" + data.reports[i].orderId + "</td>  <td>" + data.reports[i].time + "</td><td><span class='label label-warning radius'>Waiting</span></td><td>无反馈</td></tr>");
+                }
+            }
+        }
+        
 
 
 

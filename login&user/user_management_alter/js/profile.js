@@ -32,7 +32,7 @@ var text = {
     "type": "user",
     "name": username,
 };
-//加载页面
+加载页面
 $.ajax({
     type: "POST",
     url: 'http://10.19.42.253:5000/account/get_account_details',
@@ -137,7 +137,7 @@ function switchLanguage() {
         $("#report-title").text("个人信息");
         $("#little-title").html("个人信息");
         $("#home_link").html("主菜单");
-        
+        $("#upload").html("更新个人信息");
 
         $(".form_1").each(function (i, item) {
             $(item).text(table_zh[i]);
@@ -160,6 +160,7 @@ function switchLanguage() {
         });
         $(".updata_btn").text("Update picture");
         $("#report_btn").text("Submit");
+        $("#upload").html("Upload Profile");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
         $("#profile_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Profile");
         $("#profile_link").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
