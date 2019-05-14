@@ -112,7 +112,7 @@ $.ajax({
 function test(element,data){
     $("#modal").modal("show");
     let id = element.id;
-    $("#detail").html("Details: "+data[i]);
+    $("#detail").html("Details: "+feedbacks[id]);
     // console.log(id);
 }
 
