@@ -29,21 +29,24 @@ $("#insurance_1").on('click',function () {
 var text = {
     "username":username,
 };
+console.log(username)
 
-// $.ajax({
-//     type: "POST",
-//     url: 'http://10.19.42.253:5000/report/get_someone_report',
-//     data: JSON.stringify(text),
-//     contentType: "application/jason; charset=UTF-8",
-//     async: false,
-//     cache: false,
-//     processData: false,
-//     //解析后端代码，对页面做出反馈
-//     success: function (data) {
-//         // $("#description_1").html("You ")
-//         $("#expire_date").html();
-//     }
-// })
+
+$.ajax({
+    type: "POST",
+    url: 'http://10.19.42.253:5000/account/get_validity',
+    data: JSON.stringify(text),
+    contentType: "application/jason; charset=UTF-8",
+    async: false,
+    cache: false,
+    processData: false,
+    //解析后端代码，对页面做出反馈
+    success: function (data) {
+        // let date = new Date(data.validity)
+        let time = data.validity
+        $("#expire_date").html(time.slice(0,-12));
+    }
+})
 
 function drawModal(element){
     var id = element.id;
@@ -82,6 +85,7 @@ $("#confirm_btn").on('click',function () {
             success: function (data) {
                 if(data.status == "success"){
                     alert("Renew Success!")
+                    window.reload;
                 }
                 else{
                     alert("Error!")
