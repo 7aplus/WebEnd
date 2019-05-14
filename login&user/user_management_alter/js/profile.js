@@ -32,7 +32,7 @@ var text = {
     "type": "user",
     "name": username,
 };
-加载页面
+
 $.ajax({
     type: "POST",
     url: 'http://10.19.42.253:5000/account/get_account_details',

@@ -99,7 +99,6 @@ btn.addEventListener('click', function (e) {
     // else{
     // set the data message
     var srcdat = ' ';
-    alert(srcData.toString());
     var text = {
         "username": username,
         "location": location,
@@ -125,14 +124,16 @@ btn.addEventListener('click', function (e) {
             }
             else if (jsonArray.status_code == 100211) {
                 alert("Success!");
-                window.location.href = "user_managment_alter.html";
+
             }
             else if (jsonArray.status_code == 100220) {
                 alert("Password Wrong");
             }
 
         }
-    })
+    });
+    window.history.go(-1);
+
     // }
 
 

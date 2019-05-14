@@ -62,8 +62,12 @@ function showTable(data) {
             else if (i===6){
                 let button=document.createElement('button');
                 button.className='response';
-                button.id='response';
-                button.innerHTML='edit';
+                var language_now = window.localStorage.getItem("language");
+                if(language_now=="zh"){
+                    button.innerHTML='编辑';
+                }else {
+                    button.innerHTML='edit';
+                }
                 attr.appendChild(button);
             }
 
@@ -112,8 +116,12 @@ function showNewTable(data){
         else if (i===6){
             let button=document.createElement('button');
             button.className='response';
-            button.id='response';
-            button.innerHTML='edit';
+            var language_now = window.localStorage.getItem("language");
+            if(language_now=="zh"){
+                button.innerHTML='编辑';
+            }else {
+                button.innerHTML='edit';
+            }
             button.onclick=function(){
                 let td=$(this).parent();
                 let index=td.parent()[0].rowIndex;

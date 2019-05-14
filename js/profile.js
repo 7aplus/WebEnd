@@ -117,6 +117,8 @@ function switchLanguage() {
         $("#report-title").text("主菜单");
         $("#little-title").html("个人信息");
         $("#home_link").html("主页");
+        // $('#update').html('确认更新');
+        document.getElementById('update').innerHTML='确认更新';
         $("#switch_language_btn").html("切换语言");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
@@ -129,6 +131,7 @@ function switchLanguage() {
         $("#report-title").text("Basic Table");
         $("#little-title").html("Profile");
         $("#home_link").html("Home");
+        document.getElementById('update').innerHTML='Update Profile';
         $("#switch_language_btn").html("Switch Language");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
         $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
