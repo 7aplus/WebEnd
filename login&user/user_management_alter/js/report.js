@@ -224,21 +224,21 @@ function switchLanguage() {
 
 
     } else {
-        $("label").each(function (i, item) {
-            $(item).text(table_en[i]);
-        });
-        $("#report-title").text("Report");
-        $("#little-title").html("Report");
-        $("#home_link").html("Home");
-        $(".card-title").html("Basic Form");
-        $("#switch_language_btn").html("switch language");
-        $("#basic_form").children("label").each(function (i, item) {
-            $(item).text(table_en[i]);
-        });
-        $("#report_btn").text("Submit");
-        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
-        $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
-        $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+        // // $("label").each(function (i, item) {
+        // //     $(item).text(table_en[i]);
+        // // });
+        // $("#report-title").text("Report");
+        // $("#little-title").html("Report");
+        // $("#home_link").html("Home");
+        // $(".card-title").html("Basic Form");
+        // $("#switch_language_btn").html("switch language");
+        // $("#basic_form").children("label").each(function (i, item) {
+        //     $(item).text(table_en[i]);
+        // });
+        // $("#report_btn").text("Submit");
+        // $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        // $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
+        // $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
     }
 }
 
