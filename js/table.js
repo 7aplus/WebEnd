@@ -62,6 +62,7 @@ function showTable(data) {
             else if (i===6){
                 let button=document.createElement('button');
                 button.className='response';
+                button.id='response';
                 button.innerHTML='edit';
                 attr.appendChild(button);
             }
@@ -111,6 +112,7 @@ function showNewTable(data){
         else if (i===6){
             let button=document.createElement('button');
             button.className='response';
+            button.id = 'response';
             button.innerHTML='edit';
             button.onclick=function(){
                 let td=$(this).parent();
@@ -195,7 +197,7 @@ function switchLanguage() {
         $("#switch_language_btn").html("切换语言");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
-
+        $('#response').html("操作");
         $(".dropdown-header").text("选择种类");
         $(".dropdown-toggle").text("全部");
         var select_zh = ["全部","等待","拒绝","接受"];
@@ -211,6 +213,7 @@ function switchLanguage() {
         $("#report-title").text("Basic Table");
         $("#little-title").html("Basic Table");
         $("#home_link").html("Home");
+        $('#response').html("edit");
         $("#switch_language_btn").html("Switch Language");
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
         $("#profile").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
