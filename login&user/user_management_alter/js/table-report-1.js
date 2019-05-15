@@ -130,17 +130,26 @@ function switchLanguage() {
         $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>主菜单");
         $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>上报");
         $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>个人信息");
+
+        $("#policy_1").html("我们的多语种援助团队可以在您最需要的时候为您提供帮助。你需要医疗和交通。");
+        $("#policy_2").html("您的个人信息将会提供给系统，以便你在后续的更新过程中更加方便。");
+        $(".modal-title").html("更新政策：")
+        $("#close_btn").html("关闭");
+        $("#confirm_btn").html("确认");
+        $("#confirm_btn").html("确认");
+        $("#your_insurance").html("你的保险将过期于")
+
     } else {
-        $("#table_head").children("th").each(function (i, item) {
-            $(item).text(table_en[i]);
-        });
-        $("#report-title").text("Report")
-        $("#little-title").html("Report");
-        $("#home_link").html("Home");
-        $("#switch_language_btn").html("switch language");
-        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
-        $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
-        $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+        // $("#table_head").children("th").each(function (i, item) {
+        //     $(item).text(table_en[i]);
+        // });
+        // $("#report-title").text("Report")
+        // $("#little-title").html("Report");
+        // $("#home_link").html("Home");
+        // $("#switch_language_btn").html("switch language");
+        // $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        // $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
+        // $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
     }
 }
 switchLanguage();

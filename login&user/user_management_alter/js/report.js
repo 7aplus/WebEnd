@@ -133,7 +133,7 @@ btn.addEventListener('click', function (e) {
 //正则判断部分
 var strRegex = "[a-z0-9A-Z]+";
 var re=new RegExp(strRegex);
-$("#location1").on('blur',function () {
+$("#location").on('blur',function () {
     $("#location_span").removeAttr("hidden");
     if (re.test($("#location1").val()) == true){
         $("#location_div").removeAttr("class");
@@ -214,23 +214,23 @@ function switchLanguage() {
 
 
     } else {
-        $("label").each(function (i, item) {
-            $(item).text(table_en[i]);
-        });
-        $("#report-title").text("Report");
-        $("#little-title").html("Report");
-        $("#home_link").html("Home");
-        $(".card-title").html("Basic Form");
-        $('#timelabel').html('Time');
-
-        $("#switch_language_btn").html("switch language");
-        $("#basic_form").children("label").each(function (i, item) {
-            $(item).text(table_en[i]);
-        });
-        $("#report_btn").text("Submit");
-        $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
-        $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
-        $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
+        // $("label").each(function (i, item) {
+        //     $(item).text(table_en[i]);
+        // });
+        // $("#report-title").text("Report");
+        // $("#little-title").html("Report");
+        // $("#home_link").html("Home");
+        // $(".card-title").html("Basic Form");
+        // $('#timelabel').html('Time');
+        //
+        // $("#switch_language_btn").html("switch language");
+        // $("#basic_form").children("label").each(function (i, item) {
+        //     $(item).text(table_en[i]);
+        // });
+        // $("#report_btn").text("Submit");
+        // $("#home_page").html("<i class=\"fa fa-table m-r-10\" aria-hidden=\"true\"></i>Basic Table");
+        // $("#report_page").html("<i class=\"fa fa-columns m-r-10\" aria-hidden=\"true\"></i>Report");
+        // $("#profile_page").html("<i class=\"fa fa-user m-r-10\" aria-hidden=\"true\"></i>Profile");
     }
 }
 
