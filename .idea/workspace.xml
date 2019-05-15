@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c730f1a-bc5e-42a0-89c3-3c6555b05615" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,14 +26,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="1" />
-          <entry key="txt" value="37" />
+          <entry key="html" value="97" />
+          <entry key="js" value="95" />
+          <entry key="txt" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="1" />
-          <entry key="PLAIN_TEXT" value="37" />
+          <entry key="HTML" value="97" />
+          <entry key="JavaScript" value="95" />
+          <entry key="PLAIN_TEXT" value="51" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="js" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -43,42 +57,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="141" column="13" selection-start-line="141" selection-start-column="13" selection-end-line="141" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="96" column="28" selection-start-line="96" selection-start-column="28" selection-end-line="96" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="231" column="103" lean-forward="true" selection-start-line="231" selection-start-column="103" selection-end-line="231" selection-end-column="103" />
+            <state relative-caret-position="460">
+              <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/table-waiting.html">
+        <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+            <state relative-caret-position="303">
+              <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error</find>
       <find>custom</find>
       <find>fonts</find>
       <find>el-steps</find>
@@ -126,6 +122,7 @@
       <find>report</find>
       <find>location1</find>
       <find>location</find>
+      <find>your in</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,14 +151,12 @@
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/scss/style.scss" />
         <option value="$PROJECT_DIR$/login&amp;user/assets/js/login.js" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/show.js" />
         <option value="$PROJECT_DIR$/js/table-content.js" />
         <option value="$PROJECT_DIR$/table-content.html" />
         <option value="$PROJECT_DIR$/table-reject.html" />
         <option value="$PROJECT_DIR$/table-waiting.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-content.html" />
-        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html" />
         <option value="$PROJECT_DIR$/table-basic.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/profile.js" />
@@ -175,6 +170,8 @@
         <option value="$PROJECT_DIR$/js/profile.js" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report.html" />
         <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html" />
+        <option value="$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js" />
       </list>
     </option>
   </component>
@@ -330,7 +327,7 @@
       <workItem from="1557836570334" duration="3879000" />
       <workItem from="1557841058961" duration="494000" />
       <workItem from="1557842317453" duration="544000" />
-      <workItem from="1557910527666" duration="114000" />
+      <workItem from="1557910527666" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="test git">
       <created>1555383335058</created>
@@ -535,11 +532,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557842750654</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="修改bug">
+      <created>1557910711128</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1557910711128</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110727000" />
+    <option name="totallyTimeSpent" value="111762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -654,7 +658,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Demo" />
     <MESSAGE value="test git" />
     <MESSAGE value="change the style of the login page and add the user managment" />
     <MESSAGE value="add remember password" />
@@ -679,7 +682,8 @@
     <MESSAGE value="5.14 debug" />
     <MESSAGE value="5.14 debug2" />
     <MESSAGE value="更新员工左上角图标，以及用户report的location问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新员工左上角图标，以及用户report的location问题" />
+    <MESSAGE value="修改bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -766,17 +770,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3391">
-          <caret line="251" column="35" lean-forward="true" selection-start-line="251" selection-start-column="35" selection-end-line="251" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/sidebarmenu.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/table-basic.html">
@@ -848,13 +842,6 @@
     <entry file="file://$PROJECT_DIR$/assets/images/logo-icon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3128">
-          <caret line="136" column="41" lean-forward="true" selection-start-line="136" selection-start-column="41" selection-end-line="136" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/user_managment_alter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -917,8 +904,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/report.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="231" column="103" lean-forward="true" selection-start-line="231" selection-start-column="103" selection-end-line="231" selection-end-column="103" />
+        <state relative-caret-position="451">
+          <caret line="228" column="14" lean-forward="true" selection-start-line="228" selection-start-column="14" selection-end-line="228" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/table-report-1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="127" column="18" lean-forward="true" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login&amp;user/user_management_alter/js/table-report-1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
         </state>
       </provider>
     </entry>
