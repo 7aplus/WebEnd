@@ -117,6 +117,7 @@ function showNewTable(data){
             let button=document.createElement('button');
             button.className='response';
             button.id = 'response';
+            var language_now = window.localStorage.getItem("language");
             if(language_now=="zh"){
                 button.innerHTML='编辑';
             }else {
