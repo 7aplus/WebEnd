@@ -24,7 +24,7 @@ $(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" 
 
 
 $("#home_page").attr("href", "user_managment_alter.html?username=" + username);
-$("#report_page").attr("href", "table-report.html?username=" + username);
+$("#report_page").attr("href", "table-report-1.html?username=" + username);
 $("#profile_page").attr("href", "pages-profile.html?username=" + username);
 $("#home_link").attr("href", "user_managment_alter.html?username=" + username);
 

@@ -12,7 +12,7 @@ function oneValues() {
 }
 //获得用户名
 var username = window.localStorage.getItem("username");
-$(".dropdown-toggle").html("<img src=\"assets/images/users/1.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />" + username);
+$(".dropdown-toggle").html("<img src=\"assets/images/users/5.jpg\" alt=\"user\" class=\"profile-pic m-r-5\" />" + username);
 $(".card-title").html(username);
 
 
