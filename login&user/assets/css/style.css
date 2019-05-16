@@ -11,6 +11,14 @@ body {
 #word1{
 	position: relative;
 	left: 0%;
+
+}
+
+#word2{
+	font-weight:bold;
+	font-weight:600;
+	font-size: 30px;
+	left: 35%;
 }
 
 #customer_btn{
@@ -153,9 +161,9 @@ img { max-width: 100%; }
 
 .form-box {
 	margin-top: 35px;
-	background-color: rgba(255,255,255,0.6);
+	background-color: rgba(190,190,190,0.6);
 	border:2px ;
-	border-radius:25px;
+	border-radius:15px;
 }
 
 .form-top {
@@ -171,6 +179,7 @@ img { max-width: 100%; }
 	float: left;
 	width: 75%;
 	padding-top: 25px;
+	text-align: left;
 }
 
 .form-top-left h3 { margin-top: 0; }
