@@ -143,7 +143,7 @@ document.getElementById("signin_btn").addEventListener("click", function (e) {
                     else if(data.status_code  == 100211){
                         window.localStorage.setItem("username", username);
                         if (value=='customer'){
-                            window.location.href = "user_management_alter/user_managment_alter.html?username="+username;
+                            window.location.href = "user_management_alter/table-report-1.html";
                         } else if(value=='employee'){
                             window.location.href = "../table-basic.html?username="+username;
                         }
